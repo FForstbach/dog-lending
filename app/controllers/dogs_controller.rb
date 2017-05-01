@@ -14,7 +14,13 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@dogs) do |dog, marker|
+      marker.lat @dog.latitude
+      marker.lng @dog.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
     authorize @dog
+
   end
 
   def new

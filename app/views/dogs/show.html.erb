@@ -1,13 +1,31 @@
-<h1>THis is the dog!</h1>
+
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @dog.photo_url, width: 800, crop: :fit %>');">
+  <div class="banner-content show">
+
+
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h2><%=  @dog.name %></h2>
+    <div class="col-xs-12 col-sm-6">
+    <h1><%= "This is #{@dog.name}!" %></h1>
+      <p><%= "About #{@dog.name}:" %></p>
       <p><%= @dog.description %></p>
-      <p><%= @dog.breed %></p>
-      <%= cl_image_tag @dog.photo, height: 250, width: 400, crop: :fill %>
-      <p></p>
+      <p><%= "Breed: #{@dog.breed}" %></p>
     </div>
+    <div class="col-xs-12 col-sm-6">
+     <p class="text-center"><%= "Location: #{@dog.location}" %></p>
+      <div id="map" class="show" style="width: 100%; height: 300px;">
+      </div>
+    </div>
+    <%= link_to "Go back to overview", dogs_path %>
   </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    var map_markers = <%= raw @hash.to_json %>;
+  <% end %>
+<% end %>
