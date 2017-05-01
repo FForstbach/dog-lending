@@ -4,6 +4,7 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
+    @dogs = Dog.all
   end
 
   def show

@@ -21,6 +21,7 @@ gem 'autoprefixer-rails'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 gem "pundit"
+gem 'faker'
 
 group :development, :test do
   gem 'binding_of_caller'
