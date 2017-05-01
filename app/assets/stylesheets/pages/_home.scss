@@ -2,3 +2,65 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.videobanner {
+  position: relative;
+  color: #346660;
+  top: 19%;
+  left: 1%;
+  margin-top: 7%;
+  text-shadow: 0 0 0 #000;
+  vertical-align: middle;
+  .fa {
+    color: #346660;
+  }
+}
+
+.videobanner p {
+  font-size: 30px;
+  color: white;
+}
+
+.owner {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border-radius: 18px;
+  padding-top: 9px;
+  padding: 13px;
+  top: 38%;
+  border: 2px solid #346660;
+  top: 41%;
+  left: 33%;
+  text-shadow:0 0 0 #000;
+
+  .fa {
+    font-size: 20px;
+    color: #346660;
+  }
+}
+
+
+
+.borrower {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border-radius: 18px;
+  padding-top: 9px;
+  padding: 13px;
+  top: 38%;
+  border: 2px solid #346660;
+  top: 41%;
+  left: 38%;
+  text-shadow:0 0 0 #000;
+
+  .fa {
+    font-size: 20px;
+    color: #346660;
+  }
+}
+
+
+

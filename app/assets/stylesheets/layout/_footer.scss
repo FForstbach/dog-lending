@@ -1,1 +1,21 @@
 // Your footer style
+.footer-bottom {
+  background-color: #346660;
+  min-height: 57px;
+  width: 100%;
+  color: white;
+  padding-top: 14px;
+  padding-right: 520px;
+  font-family: ‘Rubik’, sans-serif;
+  font-size: 18px;
+}
+
+.footerp p {
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.5em;
+}
+
+.footer p {
+  font-family: 'Gudea', sans-serif;
+  flex: 1;
+}
