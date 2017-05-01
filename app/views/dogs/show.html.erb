@@ -6,6 +6,7 @@
       <h2><%=  @dog.name %></h2>
       <p><%= @dog.description %></p>
       <p><%= @dog.breed %></p>
+      <%= cl_image_tag @dog.photo, height: 250, width: 400, crop: :fill %>
       <p></p>
     </div>
   </div>

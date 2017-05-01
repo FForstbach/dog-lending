@@ -21,6 +21,7 @@ end
     size: ["small","medium","large"].sample,
     description: Faker::Hipster.sentences,
     breed: Faker::StarWars.specie,
+    remote_photo_url: Faker::Placeholdit.image("400x250", 'jpg'),
     location: ["Hauptstr. ", "Torstr. ", "Frankfurter Str. ","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
   d.save
 end
