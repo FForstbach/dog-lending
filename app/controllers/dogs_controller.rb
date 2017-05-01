@@ -1,7 +1,13 @@
 class DogsController < ApplicationController
+
+    skip_before_action :authenticate_user!, only: [:index, :show, :new]
+
   def index
-    @dogs = Dog.all
-    authorize @dog
+    @dogs = policy_scope(Dog).order(created_at: :desc)
+  end
+
+  def show
+    @dog = Dog.find(params[:id])
   end
 
   def new
@@ -23,4 +29,7 @@ class DogsController < ApplicationController
   def destroy
     @dog = Dog.find(params[:id])
   end
+
+
+
 end
