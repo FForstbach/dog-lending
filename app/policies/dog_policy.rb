@@ -2,7 +2,7 @@ class DogPolicy < ApplicationPolicy
 
   class Scope < Scope
     def resolve
-      scope.where(user: user)
+      scope.all
 
       # For a multi-tenant SaaS app, you may want to use:
       # scope.where(user: user)

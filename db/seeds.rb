@@ -20,7 +20,7 @@ end
     age: rand(1..12),
     size: ["small","medium","large"].sample,
     description: Faker::Hipster.sentences,
-    latitude: Faker::Address.latitude,
-    longitude: Faker::Address.longitude)
+    breed: Faker::StarWars.specie,
+    location: ["Hauptstr. ", "Torstr. ", "Frankfurter Str. ","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
   d.save
 end
