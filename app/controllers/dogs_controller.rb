@@ -4,7 +4,11 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
-    @dogs = Dog.all
+    @dogs = Dog.where.not(latitude: nil, longitude: nil)
+    @hash = Gmaps4rails.build_markers(@flats) do |dog, marker|
+    marker.lat dog.latitude
+    marker.lng dog.longitude
+    # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
   end
 
   def show

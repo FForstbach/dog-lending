@@ -15,6 +15,12 @@ User.destroy_all
 end
 
 20.times do
-  d = Dog.new(user_id: User.first.id, name: Faker::StarWars.character, age: rand(1..12), size: ["small","medium","large"].sample, description: Faker::Hipster.sentences)
+  d = Dog.new(user_id: User.first.id,
+    name: Faker::StarWars.character,
+    age: rand(1..12),
+    size: ["small","medium","large"].sample,
+    description: Faker::Hipster.sentences,
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude)
   d.save
 end
