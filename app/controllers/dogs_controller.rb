@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
 
     skip_before_action :authenticate_user!, only: [:index, :show, :new]
+    before_action :find_dog, only: [:show, :update, :destroy]
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
@@ -13,7 +14,8 @@ class DogsController < ApplicationController
   end
 
   def show
-    @dog = Dog.find(params[:id])
+    authorize @dog
+
   end
 
   def new
@@ -22,17 +24,37 @@ class DogsController < ApplicationController
   end
 
   def create
-    @dog = Dog.find(params[:id])
+    @dog = Dog.new
+    @dog.name = params[:dog][:name]
+    @dog.breed = params[:dog][:breed]
+    @dog.age = params[:dog][:age]
+    @dog.description = params[:dog][:description]
+    @dog.size = params[:dog][:size]
+    @dog.photo = params[:dog][:photo]
+    @dog.user = current_user
+    @dog.location = params[:dog][:location]
+    authorize @dog
+    @dog.save
+    redirect_to dogs_path
   end
 
   def edit
   end
 
   def update
-    @dog = Dog.find(params[:id])
   end
 
   def destroy
-    @dog = Dog.find(params[:id])
   end
+
+  private
+
+  def strong_params
+    params.require(:dogs).permit(:name, :breed, :age, :description, :size, :photo, :location)
+  end
+
+  def find_dog
+    @dog = Dog.find(strong_params)
+  end
+
 end

@@ -11,7 +11,7 @@ User.destroy_all
 
 10.times do
   u = User.new(email: Faker::Internet.free_email, password: "123456")
-  u.save
+  u.save!
 end
 
 20.times do
@@ -21,6 +21,7 @@ end
     size: ["small","medium","large"].sample,
     description: Faker::Hipster.sentences,
     breed: Faker::StarWars.specie,
-    location: ["Hauptstr. ", "Torstr. ", "Frankfurter Str. ","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
-  d.save
+    remote_photo_url: "https://unsplash.it/400/250?image=#{rand(100..500).to_s}",
+    location: ["Hauptstr. ","Torstr. ","Kantstr.","Seestr.","Sonnenallee","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
+  d.save!
 end
