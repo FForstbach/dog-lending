@@ -63,13 +63,17 @@ en:
       new:
         resend_unlock_instructions: Resend unlock instructions
   dogs:
-    edit: 
-    index: 
-    new: 
-    show: 
-  messages: 
+    edit:
+    index:
+    new:
+    show:
+  messages:
   pages:
-    home: 
+    home:
+    dashboard:
+      title: "Welcome!"
+      messages_title: "My Messages"
+      dogs_title: "My Dogs"
   shared:
     navbar:
       profile: Profile
