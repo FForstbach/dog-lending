@@ -24,16 +24,16 @@ class DogsController < ApplicationController
   end
 
   def create
-    @dog = Dog.new
-    @dog.name = params[:dog][:name]
-    @dog.breed = params[:dog][:breed]
-    @dog.age = params[:dog][:age]
-    @dog.description = params[:dog][:description]
-    @dog.size = params[:dog][:size]
-    @dog.photo = params[:dog][:photo]
-    @dog.user = current_user
-    @dog.location = params[:dog][:location]
     authorize @dog
+    @dog = Dog.new(strong_params)
+    # @dog.name = params[:dog][:name]
+    # @dog.breed = params[:dog][:breed]
+    # @dog.age = params[:dog][:age]
+    # @dog.description = params[:dog][:description]
+    # @dog.size = params[:dog][:size]
+    # @dog.photo = params[:dog][:photo]
+    # @dog.user = current_user
+    # @dog.location = params[:dog][:location]
     @dog.save
     redirect_to dogs_path
   end
@@ -50,7 +50,7 @@ class DogsController < ApplicationController
   private
 
   def strong_params
-    params.require(:dogs).permit(:name, :breed, :age, :description, :size, :photo, :location)
+    params.require(:dog).permit(:name, :breed, :age, :user, :description, :size, :photo, :photo_cache, :location)
   end
 
   def find_dog
