@@ -2,12 +2,20 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+
+ h1 {
+  font-size: 59px;
+ }
+
+
 .videobanner {
   position: relative;
   color: #346660;
   top: 19%;
   left: 1%;
-  margin-top: 7%;
+  margin-top: 14%;
+  margin-bottom: 2%;
   text-shadow: 0 0 0 #000;
   vertical-align: middle;
   .fa {
@@ -22,7 +30,7 @@
 
 .owner {
   position: relative;
-  font-size: 20px;
+  font-size: 31px;
   color: white;
   background-color: transparent;
   border-radius: 18px;
@@ -31,11 +39,11 @@
   top: 38%;
   border: 2px solid #346660;
   top: 41%;
-  left: 33%;
+  left: 9%;
   text-shadow:0 0 0 #000;
 
   .fa {
-    font-size: 20px;
+    font-size: 42px;
     color: #346660;
   }
 }
@@ -44,7 +52,7 @@
 
 .borrower {
   position: relative;
-  font-size: 20px;
+  font-size: 31px;
   color: white;
   background-color: transparent;
   border-radius: 18px;
@@ -53,14 +61,26 @@
   top: 38%;
   border: 2px solid #346660;
   top: 41%;
-  left: 38%;
+  left: 18%;
   text-shadow:0 0 0 #000;
 
+
   .fa {
-    font-size: 20px;
+    font-size: 42px;
     color: #346660;
   }
 }
+
+#boxContainerContainer {
+    text-align: center;
+}
+
+#boxContainer {
+    display:inline-block;
+    text-align: left;
+}
+
+
 
 
 
