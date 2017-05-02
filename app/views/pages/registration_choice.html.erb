@@ -1,0 +1,4 @@
+<p>This is where the user chooses which type of registration he will see</p>
+
+<%= link_to "I own a dog", new_user_registration_path(:type => 'owner') %>
+<%= link_to "I am interested borrowing a dog", new_user_registration_path(:type => 'borrower') %>
