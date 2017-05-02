@@ -1,22 +1,40 @@
 <div class="banner dashboard" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('background.jpg');">
-  <div class="banner-content">
-    <h1><%= t('.title') %></h1>
+  <div class="banner-content text-center">
+    <h1><%= t('.title') %> <%= @user.email %> </h1>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h1 class="dashboard">Profile Dashboard</h1>
+      </div>
+    </div>
 
-      <div class="dashboard">
-        <div class="col-xs-12 div col-md-6">
-          <div class="profile">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="profile text-center panel">
           <h2><%= t('.messages_title') %></h2>
-
-          </div>
+          <!-- messages go here -->
         </div>
-        <div class="col-xs-12 div col-md-6">
-          <div class="dogs">
+      </div>
+
+      <div class="col-xs-6">
+        <div class="profile-dogs text-center panel">
           <h2><%= t('.dogs_title') %></h2>
+        </div>
+
+        <div class="dog-profile">
+          <div class="row">
+            <div class="col-xs-3 col-md-4">
+              <%= image_tag "dogexample.jpg", class: "img-thumbnail" %>
+              <h5>Available?</h5>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-8">
+              <h3>dog name</h3>
+              <h3>dog breed</h3>
+            </div>
 
           </div>
         </div>
@@ -24,4 +42,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
 
