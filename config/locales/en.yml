@@ -71,9 +71,9 @@ en:
   pages:
     home:
     dashboard:
-      title: "Welcome!"
+      title: "Welcome"
       messages_title: "My Messages"
-      dogs_title: "My Dogs"
+      dogs_title: "My Bitches"
   shared:
     navbar:
       profile: Profile
