@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :users do
         resources :messages, only: [:index, :new, :create]
       end
-    resources :dogs_path
+    resources :dogs
     get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
   end
 end
