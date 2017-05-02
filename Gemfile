@@ -25,6 +25,7 @@ gem 'faker'
 gem 'geocoder'
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'devise-i18n'
   source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end

@@ -6,7 +6,11 @@
   <%  @dogs.each do |dog| %>
     <div class="col-xs-12 col-sm-4">
       <!-- insert <div class="card"> -->
-      <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>');">
+      <% if dog.photo.presence %>
+        <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>");>
+      <% elsif %>
+        <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('https://static.pexels.com/photos/7720/night-animal-dog-pet.jpg');">
+      <% end %>
         <div class="card-category">Popular</div>
         <div class="card-description">
           <h2><%= link_to dog.name, dog_path(dog) %></h2>
