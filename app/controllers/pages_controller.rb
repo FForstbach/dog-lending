@@ -5,5 +5,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @user = current_user
+    @dogs = @user.dogs
+    # @messages = @user.messages
   end
 end
