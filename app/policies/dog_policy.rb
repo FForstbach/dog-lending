@@ -21,6 +21,10 @@ class DogPolicy < ApplicationPolicy
     true
   end
 
+  def dashboard?
+    record.user == user
+  end
+
   def create?
     true
   end
