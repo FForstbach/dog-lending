@@ -45,6 +45,7 @@ en:
         update: Update
         we_need_your_current_password_to_confirm_your_changes: We need your current
           password to confirm your changes
+        title_onboarding: Tell the dog owners a bit about yourself!
       new:
         sign_up: Sign up
     sessions:

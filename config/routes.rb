@@ -6,11 +6,10 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /de/ do
     root to: 'pages#home'
-      resources :users do
+      namespace :users do
         resources :messages, only: [:index, :new, :create]
       end
     resources :dogs
     get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
-
   end
 end

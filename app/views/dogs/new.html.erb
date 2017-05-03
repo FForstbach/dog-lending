@@ -2,13 +2,15 @@
   <div class="row">
     <div class="col-xs-12"></div>
     <h1>Add your dog</h1>
+    <% if current_user.dogs.first.nil? %>
+      <%= link_to "Skip now and add my dog later", dashboard_path %>
+    <% end %>
+    <hr>
       <%= simple_form_for(@dog) do |f| %>
       <%= f.input :name %>
       <%= f.input :breed %>
       <%= f.input :age %>
       <%= f.input :description %>
-      <%= f.input :size, collection: [ "Small", "Medium", "Large"]%>
-      <%= f.input :location %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit %>
