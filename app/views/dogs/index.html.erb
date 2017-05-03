@@ -24,6 +24,8 @@
   </div>
 </div>
 
+
+
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     var map_markers = <%= raw @hash.to_json %>;
