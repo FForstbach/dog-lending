@@ -17,7 +17,7 @@
           </div>
         <% else %>
           <div class="col-xs-12">
-            <div class="message sent">
+            <div class="message sent" id="new_message">
               <p>Your wrote:</p>
               <div class="message-content sent">
                 <p><%= message.content %></p>
@@ -27,12 +27,7 @@
         <% end %>
       <% end %>
       <hr>
-      <%= simple_form_for([ @message ], remote: true) do |form| %>
-        <%= form.input :content, placeholder: "Type your message!" %>
-        <%= hidden_field_tag "user_id", current_user.id %>
-        <%= hidden_field_tag "request_id", @request.id %>
-        <%= form.button :submit, id:"btn btn-primary" %>
-      <% end %>
+      <%= render "form" %>
     </div>
   </div>
 </div>

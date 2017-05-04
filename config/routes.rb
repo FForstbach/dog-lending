@@ -10,8 +10,10 @@ Rails.application.routes.draw do
     namespace :users do
       resources :dogs
     end
-    resources :requests
-    resources :messages, only: [:create]
+    resources :requests do
+      resources :messages, only: [:create]
+    end
+
     get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
   end
 end
