@@ -19,3 +19,9 @@
   flex: 1;
   font-size: 20px;
 }
+
+@media only screen and (min-width: 375px) {
+  p {
+    font-size: 10px;
+  }
+}
