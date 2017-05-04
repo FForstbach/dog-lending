@@ -6,7 +6,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @dogs = @user.dogs
+    user_id = current_user.id
+    @dogs = Dog.where(user_id: user_id)
     # @messages = @user.messages
   end
 end

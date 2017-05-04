@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
 
     skip_before_action :authenticate_user!, only: [:index, :show, :new]
-    before_action :find_dog, only: [:show, :update, :destroy]
+    before_action :find_dog, only: [:show, :edit, :update, :destroy]
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
@@ -14,8 +14,6 @@ class DogsController < ApplicationController
   end
 
   def show
-    authorize @dog
-
   end
 
   def new
@@ -54,7 +52,8 @@ class DogsController < ApplicationController
   end
 
   def find_dog
-    @dog = Dog.find(strong_params)
+    @dog = Dog.find(params[:id])
+    authorize @dog
   end
 
 end
