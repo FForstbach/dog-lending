@@ -1,31 +1,18 @@
 <div class="navbar-wagon">
   <!-- Logo -->
 
-  <a href="/" class="navbar-wagon-brand">
+    <a href="/" class="navbar-wagon-brand">
     <%= cl_image_tag "Wauwauclub_logo_bgjyia", class: "banner_logo" %>
-  </a>
+    </a>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Search form -->
 
-    <!-- Text link -->
-    <div>
-      <i class="fa fa-search" aria-hidden="true"></i>
-      <%= link_to "Search for Dogs", dogs_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    </div>
 
-    <!-- Profile picture and dropdown -->
+    <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
-    <div class="navbar-wagon-item">
-      <div class="dropdown text-center">
-        <img src="http://www.fillmurray.com/g/60/60" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="<%= dogs_path %>">Dashboard</a></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
-          <li>           <%= link_to "My Profile", dogs_path, class: "navbar-wagon-link" %></li>
-        </ul>
 
       <!-- Notification -->
 
@@ -54,17 +41,15 @@
           </ul>
         </div>
       </div>
-    </div>
 
     <% else %>
 
       <!-- Login text link -->
-       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
        <%= link_to t(".top_call_to_action", default: "sign up"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+  </div>
 
     <% end %>
-      
-    </div>
 
     <!-- Button (call-to-action) -->
 
@@ -82,4 +67,6 @@
     </div>
   </div>
 </div>
+
+
 
