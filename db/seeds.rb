@@ -21,7 +21,7 @@ end
     size: ["small","medium","large"].sample,
     description: Faker::Hipster.sentences,
     breed: Faker::StarWars.specie,
-    remote_photo_url: "https://unsplash.it/400/250?image=#{rand(100..500).to_s}",
+    photo: open("http://res.cloudinary.com/dqvdsbkrk/image/upload/v1493801237/ftfup9c9u2x7fufkzshf.jpg"),
     location: ["Hauptstr. ","Torstr. ","Kantstr.","Seestr.","Sonnenallee","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
   d.save!
 end
