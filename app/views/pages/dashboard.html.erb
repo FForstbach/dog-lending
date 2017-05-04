@@ -25,30 +25,29 @@
           <h2><%= t('.dogs_title') %></h2>
         </div>
 
-        <div class="dog-profile">
-          <div class="row">
-            <div class="col-xs-3 col-md-4">
-              <%= image_tag "dogexample.jpg", class: "img-thumbnail" %>
-              <h5>Available?</h5>
+        <div class="col-xs-12">
+          <% @dogs.each do |dog| %>
+            <div class="dog-profile">
+              <div class="row">
+                <div class="col-xs-6">
+                  <%= image_tag "dogexample.jpg", class: "img-thumbnail" %>
+                </div>
+                  <h3><%= dog.name %>: <%= dog.breed %></h3>
+                  <%= link_to "Manage Pup", edit_dog_path(id: dog.id), {class: "btn btn-primary"} %>
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-8">
-              <h3>dog name</h3>
-              <h3>dog breed</h3>
-            </div>
+          <% end %>
+            <div class="edit-dogs">
+              <hr>
 
-          </div>
-        </div>
+              <hr>
+              <h5>Walk another dog</h5>
+      </div>
+
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
 
 
 
