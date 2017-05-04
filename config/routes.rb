@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /de/ do
     root to: 'pages#home'
     namespace :users do
-      resources :dogs
     end
+    resources :dogs
     resources :requests do
       resources :messages, only: [:create]
     end
