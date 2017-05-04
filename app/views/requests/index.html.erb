@@ -1,0 +1,16 @@
+
+
+<div class="container">
+  <div class="row">
+    <% @requests.each do |request| %>
+      <div class="col-xs-12">
+      <!-- insert <div class="card"> -->
+        <div class="card messages" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+            <h2>Request for <%= request.dog.name %></h2>
+            <h3>By <%= request.user.first_name %></h3>
+            <p>Last Message: <%= @last_message[:content] %></p>
+          <a class="card-link" href="<%= request_path(request) %>" ></a>
+        </div>
+    <% end %>
+  </div>
+</div>

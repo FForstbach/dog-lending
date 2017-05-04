@@ -1,0 +1,8 @@
+<h1>New Request</h1>
+<p>Ask the owner about his dog :)</p>
+
+<% simple_form_for @message do |f| -%>
+  <%= @dog %>
+  <%= f.input :content %>
+  <%= f.submit "Submit your request" %>
+<% end -%>

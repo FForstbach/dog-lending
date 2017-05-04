@@ -1,0 +1,39 @@
+<h1 class="text-center">Request for <%= @request.dog.name %></h1>
+
+<p class="text-center">Your Messages</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%=  @request.messages.each do |message| %>
+        <% if current_user != message.user %>
+          <div class="col-xs-12">
+            <div class="message received">
+              <p><%= message.user.first_name %> wrote:</p>
+              <div class="message-content received">
+                <p><%= message.content %></p>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class="col-xs-12">
+            <div class="message sent">
+              <p>Your wrote:</p>
+              <div class="message-content sent">
+                <p><%= message.content %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+      <hr>
+      <%= simple_form_for([ @message ], remote: true) do |form| %>
+        <%= form.input :content, placeholder: "Type your message!" %>
+        <%= hidden_field_tag "user_id", current_user.id %>
+        <%= hidden_field_tag "request_id", @request.id %>
+        <%= form.button :submit, id:"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<hr>

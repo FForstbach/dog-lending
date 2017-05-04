@@ -16,12 +16,15 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module DogLending
   class Application < Rails::Application
     config.generators do |generate|
       generate.assets false
       generate.helper false
     end
+
+    config.action_view.embed_authenticity_token_in_remote_forms = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

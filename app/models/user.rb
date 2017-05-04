@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :dogs
+  has_many :requests
 
   mount_uploader :photo, PhotoUploader
 end
