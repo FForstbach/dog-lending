@@ -8,6 +8,33 @@
   box-shadow: 1px 1px 1px #888888;
   margin: 10px 0;
 }
+
+.card.messages {
+  height: 100px;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #888888;
+  margin: 10px 0;
+}
+
+.card.messages h2 {
+padding-top: 10px;
+  font-size: 24px;
+}
+
+.card.messages h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card.messages p {
+  font-size: 14px;
+  color: black;
+  padding: 0 0 5px 0;
+}
+
 .card-user {
   position: relative;
   right: -1px;

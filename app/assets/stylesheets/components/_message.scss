@@ -1,0 +1,51 @@
+.message p {
+  font-size: 18px;
+  margin: 10px 0;
+
+}
+
+.message.received p {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.message.sent p {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.message-content.received {
+  background-color: #e2dcdc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0.5px 0.5px 1px #888888;
+  color: #ffffff;
+  width: 70%;
+  float: left;
+}
+
+.message-content.received p {
+  text-align: left;
+  font-size: 24px;
+}
+
+
+.message-content.sent {
+  background-color: #a3f084;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0.5px 0.5px 1px #888888;
+  color: #ffffff;
+  width: 70%;
+  float: right;
+}
+
+.message-content.sent p {
+  text-align: left;
+  font-size: 24px;
+}
+
