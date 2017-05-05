@@ -3,19 +3,20 @@
 <div class="container">
   <div class="row">
   <%  @dogs.each do |dog| %>
+
+
     <div class="col-xs-12 col-sm-4">
       <!-- insert <div class="card"> -->
+
       <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>');">
         <div class="card-category"><h2><%= link_to dog.name, dog_path(dog) %></h2></div>
         <h4 class="breed"><%= dog.breed %></h4>
-
-
         <div class="card-description text-center">
           <p><i class="fa fa-map-marker" aria-hidden="true"></i>
           <%= dog.location %></p>
         </div>
         <img class="card-user avatar" src="http://www.fillmurray.com/g/60/60">
-        <a class="card-link" href="#" ></a>
+         <% link_to dog_path(dog) %>
       </div>
       <h1 class="banner-card">.</h1>
     </div>

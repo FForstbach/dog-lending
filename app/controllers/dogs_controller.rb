@@ -3,6 +3,7 @@ class DogsController < ApplicationController
     skip_before_action :authenticate_user!, only: [:index, :show, :new]
     before_action :find_dog, only: [:show, :edit, :availability, :update, :destroy]
 
+
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
     # @dogs = @dogs.where.not(latitude: nil, longitude: nil)
@@ -14,6 +15,8 @@ class DogsController < ApplicationController
   end
 
   def show
+    @dog = Dog.find(params[:id])
+    authorize @dog
   end
 
   def new

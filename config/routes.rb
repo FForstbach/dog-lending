@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers: {
           registrations: 'users/registrations'
         }
@@ -6,14 +7,19 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /de/ do
     root to: 'pages#home'
-      namespace :users do
-        resources :messages, only: [:index, :new, :create]
-      end
+
+    namespace :users do
+      resources :messages, only: [:index, :new, :create]
+    end
     resources :dogs do
       member do
         post 'availability'
       end
     end
+    resources :requests do
+      resources :messages, only: [:create]
+    end
+
     get '/dashboard', to: 'pages#dashboard', as: 'dashboard'
   end
 end

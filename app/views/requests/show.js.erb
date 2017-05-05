@@ -1,0 +1,16 @@
+// app/views/reviews/create.js.erb
+// Here you will write *javascript* that would be executed by the browser
+<% if @review.errors.any? %>
+// Render new message form with errors
+  $('#new_message').html("<%= j render 'form', request: @request, message: @message %>");
+<% else %>
+// Create a paragraph for the new message. But hide it.
+  var request_id = <%= @request.id %>
+  var new_message = $("<%= j render 'form', request: @request, message: @message %>").hide();
+  // Add it to the DOM, at the end of the existing messages. It's still hidden.
+  $('#messages').append(new_message);
+  // Show the new message with an animation!
+  new_message.slideDown();
+  // Reset the form
+  $('#new_message').html("<%= j render 'form', message: Message.new %>");
+<% end %>

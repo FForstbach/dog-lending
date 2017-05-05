@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502152449) do
+ActiveRecord::Schema.define(version: 20170504134145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,22 @@ ActiveRecord::Schema.define(version: 20170502152449) do
   end
 
   create_table "messages", force: :cascade do |t|
+    t.integer  "request_id"
     t.text     "content"
-    t.integer  "user_id"
-    t.integer  "dog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dog_id"], name: "index_messages_on_dog_id", using: :btree
+    t.integer  "user_id"
+    t.index ["request_id"], name: "index_messages_on_request_id", using: :btree
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "dog_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dog_id"], name: "index_requests_on_dog_id", using: :btree
+    t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,6 +73,8 @@ ActiveRecord::Schema.define(version: 20170502152449) do
   end
 
   add_foreign_key "dogs", "users"
-  add_foreign_key "messages", "dogs"
+  add_foreign_key "messages", "requests"
   add_foreign_key "messages", "users"
+  add_foreign_key "requests", "dogs"
+  add_foreign_key "requests", "users"
 end
