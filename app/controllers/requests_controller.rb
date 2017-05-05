@@ -14,6 +14,7 @@ class RequestsController < ApplicationController
     @request = Request.new(strong_params)
     @request.user = current_user
     authorize @request
+    @request.save
     redirect_to requests_path
   end
 
@@ -21,7 +22,6 @@ class RequestsController < ApplicationController
     @requests = policy_scope(Request)
     @last_message = @requests.last.messages.last
     @user = current_user
-
   end
 
   def show
