@@ -4,7 +4,9 @@ class RequestsController < ApplicationController
 
   def new
     @message = Message.new
-    @dog = Dog.new
+    @dog = Dog.find(params[:id])
+    @request = Request.new
+    authorize @request
   end
 
   def create
