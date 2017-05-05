@@ -1,12 +1,22 @@
 .card {
   height: 413px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   background-size: cover !important;
   color: white;
   position: relative;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #888888;
   margin: 10px 0;
+  margin-bottom: -69px;
+
+p {
+  text-shadow: none;
+}
+
+a {
+  color: #96B976;
+  text-decoration: none;
+}
 }
 
 .card.messages {
@@ -43,14 +53,14 @@ padding-top: 10px;
 
 .banner-card {
   position: relative;
-  top: -91px;
+  top: -24px;
   color: white;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   left: 0px;
   height: 79px;
-  margin-top: 12px;
+  margin-top: 14px;
   padding: -139px;
   z-index: 0;
 }
