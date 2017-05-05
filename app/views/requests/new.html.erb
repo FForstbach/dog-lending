@@ -1,8 +1,12 @@
 <h1>Now it´s getting serious</h1>
-<p>Let´s get in touch with <%= dog.name %></p>
+<p>Let´s get in touch with <%= @dog.name %></p>
 
-<%= simple_form_for [@request, @message], :url => requests_path do |f| -%>
-  <%= @dog %>
-  <%= f.input :content %>
+<%= simple_form_for @request, method: "post" do |f| -%>
+  <% @request.messages.each do |message| %>
+    <%= f.simple_fields_for :messages_attributes, message do |m| %>
+      <%= m.input :content %>
+    <% end %>
+  <% end %>
+  <%= f.input :dog_id, :as => :hidden %>
   <%= f.submit "Submit your request" %>
-<% end -%>
+<% end %>
