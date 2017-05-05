@@ -1,15 +1,12 @@
-<h1 class="text-center">Now it´s getting serious</h1>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8">
-      <p>Let´s get in touch with <%= @dog.name %></p>
+      <h1>Now it´s getting serious</h1>
+      <p>So <%= @dog.name %> is a <%= @dog.breed %>, a <%= @dog.size %> dog.</p>
+      <p>Favorite snack is PLACEHOLDER_SNACK</p>
       <%= simple_form_for @request, method: "post" do |f| %>
-        <%# @request.messages.each do |message| %>
-          <%#= f.simple_fields_for :messages_attributes, message do |m| %>
-            <%#= m.input :content %>
-          <%# end %>
-        <%# end %>
-        <%= text_field_tag :'messages_attributes[][content]' %>
+        <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control', placeholder: "Enter your text here" %>
         <%= f.input :dog_id, :as => :hidden %>
         <%= f.submit "Submit your request", class: "btn btn-primary" %>
       <% end %>
@@ -17,7 +14,8 @@
     <div class="col-xs-12 col-md-4">
       <div class="dog-info">
         <img src="<%= @dog.photo %>" alt="user">
-        <p><%= @dog.name %></p>
+        <h3><%= @dog.name %></h3>
+        <p><%= @dog.breed %></p>
       </div>
     </div>
   </div>
