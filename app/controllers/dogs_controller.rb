@@ -25,8 +25,8 @@ class DogsController < ApplicationController
   end
 
   def create
-    authorize @dog
     @dog = Dog.new(strong_params)
+    authorize @dog
     # @dog.name = params[:dog][:name]
     # @dog.breed = params[:dog][:breed]
     # @dog.age = params[:dog][:age]
