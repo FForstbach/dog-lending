@@ -1,7 +1,16 @@
 .message p {
   font-size: 18px;
   margin: 10px 0;
+}
 
+.messages p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card.messages {
+  background-color: grey;
+  margin: 10px 0;
 }
 
 .message.received p {
