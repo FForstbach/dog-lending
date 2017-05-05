@@ -181,6 +181,50 @@ html, body, {
   text-align: center;
 }
 
+
+
+@media only screen and (min-width: 700px) and (max-width: 1065px){
+
+
+.owner {
+left: 12%;
+  }
+
+
+.borrower {
+left: 24%;
+  }
+
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1300px){
+
+
+.owner {
+left: 17%;
+  }
+
+
+.borrower {
+left: 31%;
+  }
+
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1500px){
+
+
+.owner {
+left: 17%;
+  }
+
+
+.borrower {
+left: 31%;
+  }
+
+}
+
 @media only screen and (max-width: 375px) {
 
 .container {
