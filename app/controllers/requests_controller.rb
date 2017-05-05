@@ -3,11 +3,18 @@ class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
 
   def new
+    # create IF-clause so that people dont create new requests for the same dog
     @dog = Dog.find(params[:dog_id])
-    @request = Request.new
-    @request.dog = @dog
-    @request.messages.build
-    authorize @request
+      if Request.all.where(user_id: current_user, dog_id: @dog.id).last.nil?
+        @request = Request.new
+        @request.dog = @dog
+        @request.messages.build
+        authorize @request
+      else
+        @request = Request.all.where(user_id: current_user).first
+        redirect_to request_path(@request)
+        authorize @request
+      end
   end
 
   def create
