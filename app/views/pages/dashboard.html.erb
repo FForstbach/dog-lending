@@ -1,14 +1,23 @@
-<div class="banner dashboard" style="background-image: url('<%= asset_path('puppers.jpg') %>');">
-  <div class="banner-content text-center">
-    <h1><%= t('.title') %> <%= @user.email %> </h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="dashboard">Profile Dashboard</h1>
+    </div>
   </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner-dashboard" style="background-image: url('<%= asset_path('puppers.jpg') %>');">
+      <div class="banner-content text-center">
+        <h2 style="font-size: 50px;"><%= t('.title') %> <%= @user.email %></h2>
+      </div>
 </div>
 
 <div class="dashboard">
-  <div class="container">
+
     <div class="row">
       <div class="col-xs-6">
-        <h1 class="dashboard">Profile Dashboard</h1>
+
       </div>
     </div>
 
