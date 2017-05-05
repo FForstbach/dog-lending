@@ -4,7 +4,7 @@
   <div class="row">
 
     <video autoplay muted loop class="embed-responsive-item video-banner" id="autovid" width="100%" >
-      <source src="<%=cl_video_path "Teddy_yj1poz"%>">
+      <source src="<%=cl_video_path "Emma_a5kavt"%>">
     </video>
         <div class="videobanner text-center">
           <h1>Connecting dog lovers and dog owners</h1>
@@ -13,8 +13,16 @@
         </div>
 
         <div class="banner-content">
-            <a href="<% new_user_registration_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
-            <a href="<% user_registration_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
+        <% if user_signed_in? %>
+          <a href="<%= dashboard_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
+          <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
+        <% else %>
+          <a href="<%= new_user_registration_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
+          <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
+        <% end %>
+
+
+
         </div>
       </div>
     </div>
