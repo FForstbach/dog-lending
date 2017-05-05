@@ -1,0 +1,65 @@
+- name: Angel
+  size: medium
+  description: Blonde simpleton with a fondness for plush carpets
+  breed: Golden Retriever
+  photo: "angelgrad.jpg"
+
+- name: Dutch
+  size: large
+  description: Energetic male in search of friendly competition and an occasional roll in the grass
+  breed: Black Lab
+  photo: "dogexample.jpg"
+
+- name: Ziggy
+  size: small
+  description: High maintenance attention seeking purse pup
+  breed: French Bulldog
+  photo: "ziggy.jpg"
+
+- name: Bunny
+  size: small
+  description: Self-indulgent bacon addict, cat hater
+  breed: Corgi
+  photo: "corgi.jpg"
+
+- name: Queen Elizabeth
+  size: large
+  description: Prides herself on her listening skills
+  breed: Poodle
+  photo: "poodle.jpg"
+
+- name: Zipper
+  size: small
+  description: God fearing introvert
+  breed: Rat Terrier
+  photo: "ratterrier.jpg"
+
+- name: Lili
+  size: small
+  description: Apartment doggo with an interest in Rails and Guardian of the Galaxy II
+  breed: Maltese
+  photo: "maltese.jpg"
+
+- name: Luna
+  size: medium
+  description: Loved by all, smart but a little bit lazy
+  breed: Retriever/Border Collie Mix
+  photo: "luna.jpg"
+
+- name: Teddy
+  size: small
+  description: Cannot distinguish his twin owners apart
+  breed: Jack Russell
+  photo: "teddy1.jpg"
+
+- name: Emma
+  size: large
+  description: Doesn't mind getting a little dressed up
+  breed: Weimaraner
+  photo: "weim2.jpg"
+
+- name: Bepis
+  size: medium
+  description: Honestly who knows
+  breed: Meme
+  photo: "bepis.jpg"

@@ -9,19 +9,32 @@
 Dog.destroy_all
 User.destroy_all
 
+
+seed_file = Rails.root.join('db', 'seeds', 'dogs.yml')
+dogs = YAML::load_file(seed_file)
+
 10.times do
   u = User.new(email: Faker::Internet.free_email, password: "123456")
   u.save!
 end
 
-20.times do
-  d = Dog.new(user_id: User.first.id,
-    name: Faker::StarWars.character,
+dogs.each do |dog|
+  d = Dog.new(user_id: User.order("RANDOM()").first.id,
+    name: dog["name"],
     age: rand(1..12),
-    size: ["small","medium","large"].sample,
-    description: Faker::Hipster.sentences,
-    breed: Faker::StarWars.specie,
-    photo: open("http://res.cloudinary.com/dqvdsbkrk/image/upload/v1493801237/ftfup9c9u2x7fufkzshf.jpg"),
+    size: dog["size"],
+    description: dog["description"],
+    breed: dog["breed"],
+    photo: File.open(File.join(Rails.root, "app/assets/images", dog["photo"])),
     location: ["Hauptstr. ","Torstr. ","Kantstr.","Seestr.","Sonnenallee","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin" )
   d.save!
 end
+
+
+
+
+
+
+
+
+
