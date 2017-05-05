@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /de/ do
     root to: 'pages#home'
 
-    namespace :users
     resources :dogs do
       member do
         post 'availability'
