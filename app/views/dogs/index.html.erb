@@ -2,21 +2,24 @@
 <div class="banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path "dogbanner_sc5jqh"%>');">
   <div class="banner-content">
     <h1>Find a dog in your area</h1>
+    <input type="text" name="q" id="q" class="form-control"/>
+
   </div>
 </div>
 
 
 
-<div class="container">
+<div class="container-index">
   <div class="row">
+  <div class="col-xs-12 col-sm-2" id="facets">
+    <div id="breed"></div>
+    <div id="size"></div>
+  </div>
+
+  <div class="col-xs-12 col-sm-10" id="hits"><div class="row">
   <%  @dogs.each do |dog| %>
 
-
-
-
-
     <div class="col-xs-12 col-md-6 col-lg-4">
-
       <!-- insert <div class="card"> -->
 
       <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>');">
@@ -33,13 +36,14 @@
 
     </div>
     <% end %>
+    </div>
   </div>
-</div>
+  </div>
+
 
 
 
 <% content_for(:after_js) do %>
-
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -112,5 +116,6 @@
   });
 </script>
 
-
 <% end %>
+
+
