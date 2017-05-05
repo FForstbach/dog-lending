@@ -13,6 +13,9 @@ class Dog < ApplicationRecord
 
   algoliasearch per_environment: true do
     attribute :name, :description, :size, :age, :location, :breed, :url
+    attribute :photo do
+      self.photo_url
+    end
     attributesForFaceting [:breed, :size]
     geoloc :latitude, :longitude
   end
