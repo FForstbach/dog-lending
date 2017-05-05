@@ -11,34 +11,36 @@
 
 <div class="container-index">
   <div class="row">
-  <div class="col-xs-12 col-sm-2" id="facets">
-    <div id="breed"></div>
-    <div id="size"></div>
-  </div>
+    <div class="col-xs-12 col-sm-2" id="facets">
+      <div id="breed"></div>
+      <div id="size"></div>
+    </div>
 
-  <div class="col-xs-12 col-sm-10" id="hits"><div class="row">
-  <%  @dogs.each do |dog| %>
+    <div class="col-xs-12 col-sm-10" id="hits">
+      <div class="row">
+        <%  @dogs.each do |dog| %>
 
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <!-- insert <div class="card"> -->
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <!-- insert <div class="card"> -->
 
-      <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>');">
-        <div class="card-category"><h2><%= link_to dog.name, dog_path(dog) %></h2></div>
-        <h4 class="breed"><%= dog.breed %></h4>
-        <div class="card-description text-center">
-          <p><i class="fa fa-map-marker" aria-hidden="true"></i>
-          <%= dog.location %></p>
-        <div class="banner-card">.</div>
+          <div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url('<%= cl_image_path dog.photo_url, crop: :fill %>');">
+            <div class="card-category"><h2><%= link_to dog.name, dog_path(dog) %></h2></div>
+            <h4 class="breed"><%= dog.breed %></h4>
+            <div class="card-description text-center">
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+                <%= dog.location %></p>
+                <div class="banner-card">.</div>
 
+              </div>
+              <img class="card-user avatar" src="http://www.fillmurray.com/g/60/60">
+            </div>
+
+          </div>
+          <% end %>
         </div>
-        <img class="card-user avatar" src="http://www.fillmurray.com/g/60/60">
       </div>
+    </div>
 
-    </div>
-    <% end %>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -49,15 +51,15 @@
   $(document).ready(function() {
 
     var hitTemplate=' <div class="col-xs-12 col-md-6 col-lg-4"><div class="card" style="background-image: linear-gradient(rgba(100,100,100,0.4), rgba(150,150,150,0.2)), url(\'{{{photo.photo.url}}}\');">'+
-        '<div class="card-category"><h2><a href="#">{{{_highlightResult.name.value}}}</a></h2></div>'+
-        '<h4 class="breed">{{{_highlightResult.breed.value}}}</h4>'+
-        '<div class="card-description text-center">'+
-          '<p><i class="fa fa-map-marker" aria-hidden="true"></i>'+
-          '{{{_highlightResult.location.value}}}</p>'+
-          '<div class="banner-card">.</div>'+
-        '</div>'+
-        '<img class="card-user avatar" src="http://www.fillmurray.com/g/60/60">'+
-      '</div></div>';
+    '<div class="card-category"><h2><a href="{{{url}}}">{{{_highlightResult.name.value}}}</a></h2></div>'+
+    '<h4 class="breed">{{{_highlightResult.breed.value}}}</h4>'+
+    '<div class="card-description text-center">'+
+    '<p><i class="fa fa-map-marker" aria-hidden="true"></i>'+
+    '{{{_highlightResult.location.value}}}</p>'+
+    '<div class="banner-card">.</div>'+
+    '</div>'+
+    '<img class="card-user avatar" src="http://www.fillmurray.com/g/60/60">'+
+    '</div></div>';
     var search = instantsearch({
       appId: '<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>',
       apiKey: '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>',
@@ -72,7 +74,7 @@
         autofocus: false,
         poweredBy: true
       })
-    );
+      );
     search.addWidget(
       instantsearch.widgets.infiniteHits({
         container: '#hits',
@@ -80,9 +82,9 @@
           empty: 'No dogs found',
           item: hitTemplate
         },
-        hitsPerPage: 10
+        hitsPerPage: 9
       })
-    );
+      );
     search.addWidget(
       instantsearch.widgets.refinementList({
         container: '#breed',
@@ -97,7 +99,7 @@
           count: 'badge pull-right'
         }
       })
-    );
+      );
     search.addWidget(
       instantsearch.widgets.refinementList({
         container: '#size',
@@ -111,7 +113,7 @@
           count: 'badge pull-right'
         }
       })
-    );
+      );
     search.start();
   });
 </script>
