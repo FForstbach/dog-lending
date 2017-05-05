@@ -7,8 +7,14 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /de/ do
     root to: 'pages#home'
+
     namespace :users do
-      resources :dogs
+      resources :messages, only: [:index, :new, :create]
+    end
+    resources :dogs do
+      member do
+        post 'availability'
+      end
     end
     resources :requests do
       resources :messages, only: [:create]
