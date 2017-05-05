@@ -1,14 +1,28 @@
-<h1>Now it´s getting serious</h1>
-<p>Let´s get in touch with <%= @dog.name %></p>
+<h1 class="text-center">Now it´s getting serious</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <p>Let´s get in touch with <%= @dog.name %></p>
+      <%= simple_form_for @request, method: "post" do |f| %>
+        <%# @request.messages.each do |message| %>
+          <%#= f.simple_fields_for :messages_attributes, message do |m| %>
+            <%#= m.input :content %>
+          <%# end %>
+        <%# end %>
+        <%= text_field_tag :'messages_attributes[][content]' %>
+        <%= f.input :dog_id, :as => :hidden %>
+        <%= f.submit "Submit your request", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="dog-info">
+        <img src="<%= @dog.photo %>" alt="user">
+        <p><%= @dog.name %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= simple_form_for @request, method: "post" do |f| %>
-  <%# @request.messages.each do |message| %>
-    <%#= f.simple_fields_for :messages_attributes, message do |m| %>
-      <%#= m.input :content %>
-    <%# end %>
-  <%# end %>
-  <%= text_field_tag :'messages_attributes[][content]' %>
-  <%= f.input :dog_id, :as => :hidden %>
-  <%= f.submit "Submit your request" %>
-<% end %>
+
+
 
