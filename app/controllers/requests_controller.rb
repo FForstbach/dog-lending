@@ -3,13 +3,18 @@ class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
 
   def new
-    @message = Message.new
-    @dog = Dog.find(params[:id])
+    @dog = Dog.find(params[:dog_id])
     @request = Request.new
+    @request.dog = @dog
+    @request.messages.build
     authorize @request
   end
 
   def create
+    @request = Request.new(strong_params)
+    @request.user = current_user
+    authorize @request
+    redirect_to requests_path
   end
 
   def index
@@ -35,5 +40,6 @@ class RequestsController < ApplicationController
   end
 
   def strong_params
+    params.require(:request).permit(:dog_id, :messages_attributes => [:content])
   end
 end
