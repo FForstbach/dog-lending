@@ -7,4 +7,12 @@ class Dog < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+  include AlgoliaSearch
+
+  algoliasearch do
+    attribute :name, :description, :size, :age, :location, :breed
+    attributesForFaceting [:breed, :size]
+    geoloc :latitude, :longitude
+  end
+
 end

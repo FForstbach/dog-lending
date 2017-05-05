@@ -1,12 +1,23 @@
 .card {
-  height: 413px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  height: 341px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   background-size: cover !important;
   color: white;
   position: relative;
-  border-radius: 10px;
+  border-radius: 9px;
   box-shadow: 1px 1px 1px #888888;
-  margin: 10px 0;
+  margin-bottom: 19px;
+  background-position: center center;
+  text-align: center;
+
+p {
+  text-shadow: none;
+}
+
+a {
+  color: #96B976;
+  text-decoration: none;
+}
 }
 
 .card.messages {
@@ -37,22 +48,22 @@ padding-top: 10px;
 
 .card-user {
   position: relative;
-  right: -1px;
-  top: 187px;
+  margin-top: 28px;
+  box-shadow: 1px 1px 1px #393737;
 }
 
 .banner-card {
   position: relative;
-  top: -91px;
+  top: -85px;
   color: white;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   left: 0px;
   height: 79px;
-  margin-top: 12px;
+  margin-top: 14px;
   padding: -139px;
-  z-index: 0;
+  z-index: -1;
 }
 
 
@@ -69,19 +80,20 @@ padding-top: 10px;
 }
 .card-description {
   position: relative;
-  top: 300px;
+  top: 224px;
   color: black;
   z-index: 1;
 
   .fa {
     color: black;
+    padding-right: 10px;
   }
 }
 .card-description h2 {
   font-size: 24px;
 }
 .card-description p {
-  font-size: 13px;
+  font-size: 20px;
   }
 .card-link {
   position: absolute;
@@ -95,4 +107,12 @@ padding-top: 10px;
 }
 .card-link:hover{
   opacity: 0.1;
+}
+
+.container-index {
+  position: relative;
+  margin-right: 36px;
+  margin-left: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

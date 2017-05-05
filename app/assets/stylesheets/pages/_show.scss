@@ -8,12 +8,31 @@
   margin-top: 20px;
 
 .btn-primary {
-  position: relative;
   border-radius: 8px;
   padding: 10px;
-  left: 359px;
-  top: -40px;
-  margin-right: 27px;
+}
+
+.back {
+  background-color: rgba(0, 0, 0, 0.32);
+
+}
+
+.fa {
+  padding-right: 15px;
+}
+
+.row {
+  padding-top: 30px;
+
+}
+
+h2, {
+  font-size: 29px;
+  text-align: left;
+}
+
+p {
+  font-size: 22px;
 }
 
 }
@@ -30,9 +49,6 @@
   width: 74%;
 }
 
-.fa {
-  padding-right: 10px;
-}
 
 
 
@@ -49,13 +65,7 @@
 
   }
 
-  .row {
 
-    .fa {
-      padding-right: 8px;
-    }
-
-  }
 
 
 

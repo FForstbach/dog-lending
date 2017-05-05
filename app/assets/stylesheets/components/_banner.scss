@@ -1,14 +1,14 @@
-
-
 .banner {
   color: white;
   text-align: center;
-  height: 64vh;
+  height: 59vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center center;
+
 }
 .banner h1 {
   font-size: 50px;
@@ -18,9 +18,12 @@
 .banner p {
   font-size: 27px;
   font-weight: lighter;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   margin-bottom: 20px;
+}
 
+.banner-content.show {
+  height: 300px;
 }
 
 .btn-primary {
@@ -34,4 +37,19 @@
   background-color: #739356;
 }
 
+.banner-content h1 {
+  color: white;
+}
+
+.banner-index {
+  color: white;
+  text-align: center;
+  min-height: 35vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+}
 

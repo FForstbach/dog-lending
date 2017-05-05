@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'hogan_assets'
 
 #my gems
 gem 'cloudinary'
@@ -26,6 +27,7 @@ gem 'geocoder'
 gem "coffee-rails"
 gem "gmaps4rails"
 gem 'devise-i18n'
+gem 'algoliasearch-rails'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
   source 'https://rails-assets.org' do

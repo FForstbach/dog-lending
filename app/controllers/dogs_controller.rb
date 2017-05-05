@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
 
     skip_before_action :authenticate_user!, only: [:index, :show, :new]
-    before_action :find_dog, only: [:update, :destroy]
+    before_action :find_dog, only: [:show, :edit, :availability, :update, :destroy]
 
 
   def index
@@ -40,6 +40,11 @@ class DogsController < ApplicationController
   end
 
   def edit
+  end
+
+  def availability
+    puts params[:value]
+    puts params[:status]
   end
 
   def update

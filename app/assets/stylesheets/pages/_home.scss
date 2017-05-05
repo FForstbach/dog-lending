@@ -6,12 +6,12 @@
 
  h1 {
   font-size: 63px;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 1 1 1 #000;
 }
 
 p {
   font-size: 25px;
-  text-shadow: 0 0 0 #fff;
+  text-shadow: 1 1 1 #fff;
   font-family: PT Sans;
 }
 
@@ -60,12 +60,13 @@ html, body, {
 
 .videobanner h1 {
   color: white;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .videobanner p {
   color: white;
   font-size: 42px;
-  text-shadow: 1 0 0 #000;
+  text-shadow: 1px 1px 1px #000;
   font-family: PT Sans;
 
 }
@@ -78,8 +79,9 @@ html, body, {
   border-radius: 18px;
   padding: 19px;
   left: 28%;
-  text-shadow:0 0 0 #000;
+  text-shadow: 1px 1px 1px #000;
   top: 50px;
+  box-shadow: 1px 1px 1px #000;
 
   .fa {
     font-size: 42px;
@@ -98,10 +100,10 @@ html, body, {
   background-color: rgba(150, 185, 118, 1);
   border-radius: 18px;
   padding: 19px;
-
   left: 38%;
-  text-shadow:0 0 0 #000;
+  text-shadow: 1px 1px 1px #000;
   top: 50px;
+  box-shadow: 1px 1px 1px #000;
 
 
   .fa {
@@ -179,12 +181,57 @@ html, body, {
   text-align: center;
 }
 
+
+
+@media only screen and (min-width: 700px) and (max-width: 1065px){
+
+
+.owner {
+left: 12%;
+  }
+
+
+.borrower {
+left: 24%;
+  }
+
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 1300px){
+
+
+.owner {
+left: 17%;
+  }
+
+
+.borrower {
+left: 31%;
+  }
+
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1500px){
+
+
+.owner {
+left: 17%;
+  }
+
+
+.borrower {
+left: 31%;
+  }
+
+}
+
 @media only screen and (max-width: 375px) {
 
 .container {
   margin-top: -375px;
 }
 }
+
 
 
 
