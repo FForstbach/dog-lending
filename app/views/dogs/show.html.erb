@@ -2,7 +2,11 @@
   <div class="banner-content">
     <h1>Woof! My name is <%= @dog.name %></h1>
     <p>Do you want to play? Click the button below to ask my owner!</p>
-    <a class="btn btn-primary btn-lg"><i class="fa fa-inbox" aria-hidden="true"></i>Message me</a>
+
+    <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg" do %>
+      <i class="fa fa-inbox"></i>
+      Message me
+    <% end %>
   </div>
 </div>
 
