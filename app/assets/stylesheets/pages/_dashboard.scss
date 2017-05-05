@@ -3,20 +3,18 @@
   display: flex;
 }
 
-h5 {
+h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
 
 #pup {
-    position: absolute;
-    left: 15px;
-    bottom: 0px;
-
+  margin-top: 15px;
 }
 
-.availability {
+.availability-class {
   border-style: solid;
+  margin-top: 10px;
 
 
 
