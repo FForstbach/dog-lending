@@ -12,7 +12,7 @@ class RequestsController < ApplicationController
         authorize @request
       else
         @request = Request.all.where(user_id: current_user).first
-        redirect_to request_path(@request)
+        redirect_to request_path(@request), flash: {notice: "Continue talking to #{@dog.name}"}
         authorize @request
       end
   end
