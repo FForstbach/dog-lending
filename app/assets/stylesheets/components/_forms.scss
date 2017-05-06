@@ -1,3 +1,12 @@
 .row.form {
   margin: 20px 0;
 }
+
+.textfield-big {
+  width:100%;
+  height: 120px;
+  overflow: auto;
+  resize: vertical;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
