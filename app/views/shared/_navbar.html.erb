@@ -12,8 +12,10 @@
 
     <!-- Text link -->
     <div>
-      <i class="fa fa-search" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
-      <%= link_to "Search for Dogs", dogs_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to dogs_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-search" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
+        Search for dogs
+      <% end %>
     </div>
 
     <!-- Profile picture and dropdown -->
