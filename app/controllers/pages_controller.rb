@@ -2,6 +2,11 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :registration_choice ]
 
   def home
+    @dogs = Dog.all
+    @dog_locations = ""
+    @dogs.each do |dog|
+      @dog_locations += dog.latitude.to_s + "," + dog.longitude.to_s + "%7C"
+    end
   end
 
   def dashboard
