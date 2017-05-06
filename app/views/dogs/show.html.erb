@@ -43,7 +43,11 @@
 
         <div id="map" class="show" style="width: 100%; height: 300px;">
         <%= link_to "Go back to overview", dogs_path, class: "btn btn-primary btn-lg back" %>
-        <a class="btn btn-primary btn-lg"><i class="fa fa-inbox" aria-hidden="true"></i>Throw me a bone!</a>
+        <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg" do %>
+          <i class="fa fa-inbox"></i>
+          Message me!
+        <% end %>
+
         </div>
 
       </div>
