@@ -1,6 +1,6 @@
 // app/views/reviews/create.js.erb
 // Here you will write *javascript* that would be executed by the browser
-<% if @review.errors.any? %>
+<% if @message.errors.any? %>
 // Render new message form with errors
   $('#new_message').html("<%= j render 'form', request: @request, message: @message %>");
 <% else %>
@@ -10,7 +10,7 @@
   // Add it to the DOM, at the end of the existing messages. It's still hidden.
   $('#messages').append(new_message);
   // Show the new message with an animation!
-  var audio = new Audio('../../assets/audio/dog_bark_small.mp3');
+  var audio = new Audio('assets/audio/dog_bark_small.mp3');
   audio.play();
   new_message.slideDown();
   // Reset the form

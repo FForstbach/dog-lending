@@ -1,12 +1,31 @@
-<h1>Now it´s getting serious</h1>
-<p>Let´s get in touch with <%= @dog.name %></p>
+<div class="banner small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@dog.photo_url, :height => 50, :crop => :scale) %>');">
+  </div>
+</div>
 
-<%= simple_form_for @request, method: "post" do |f| -%>
-  <% @request.messages.each do |message| %>
-    <%= f.simple_fields_for :messages_attributes, message do |m| %>
-      <%= m.input :content %>
-    <% end %>
-  <% end %>
-  <%= f.input :dog_id, :as => :hidden %>
-  <%= f.submit "Submit your request" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <div class="request-form text-center">
+        <h1>Now it´s getting serious</h1>
+        <p>So <%= @dog.name %> is a <%= @dog.breed %>, a <%= @dog.size %> dog.</p>
+        <p>Favorite snack is PLACEHOLDER_SNACK</p>
+        <%= simple_form_for @request, method: "post" do |f| %>
+          <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
+          <%= f.input :dog_id, :as => :hidden %>
+          <%= f.submit "Submit your request", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="dog-info">
+        <img src="<%= @dog.photo %>" alt="user">
+        <h3><%= @dog.name %></h3>
+        <p><%= @dog.breed %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -31,21 +31,31 @@
 
 
     <div class="container text centered">
-    <h1 class="text-center">How it works</h1>
-    <br><br>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
-      <p>Create a profile</p>
+      <h2 class="text-center">How it works</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
+          <p>Create a profile</p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <%= cl_image_tag "Abonement_wau_unishm", class: "venues" %>
+          <p>Choose a membership</p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <%= cl_image_tag "shareyourlove_pa4bhb", class: "venues" %>
+          <p>Share your love</p>
+          <br><br><br>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Plenty of dogs are waiting for you</h2>
+          <div class="map home">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @dog_locations %>&zoom=11&size=640x400&&scale=2&maptype=roadmap
+          &markers=size:mid%7Ccolor:red%7C<%= @dog_locations %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="This is a map">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= cl_image_tag "Abonement_wau_unishm", class: "venues" %>
-      <p>Choose a membership</p>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= cl_image_tag "shareyourlove_pa4bhb", class: "venues" %>
-      <p>Share your love</p>
-      <br><br><br>
-    </div>
-  </div>
-</div>

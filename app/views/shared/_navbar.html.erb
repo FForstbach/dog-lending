@@ -1,4 +1,4 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
 
   <a href="/" class="navbar-wagon-brand">
@@ -12,26 +12,22 @@
 
     <!-- Text link -->
     <div>
-      <i class="fa fa-search" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
-      <%= link_to "Search for Dogs", dogs_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to dogs_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-search" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
+        Search for dogs
+      <% end %>
     </div>
 
     <!-- Profile picture and dropdown -->
     <% if user_signed_in? %>
+
     <div class="navbar-wagon-item">
       <div class="dropdown text-center">
-
         <img src="http://www.fillmurray.com/g/60/60" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-
-
-
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="<%= dogs_path %>">Dashboard</a></li>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="<%= dashboard_path %>">Dashboard</a></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
-          <li>           <%= link_to "My Profile", dogs_path, class: "navbar-wagon-link" %>
-</li>
         </ul>
-
       </div>
     </div>
 
@@ -52,9 +48,8 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><a href="<%= dashboard_path %>">Dashboard</a></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: "delete"  %></li>
       </ul>
     </div>
   </div>
