@@ -3,6 +3,10 @@
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
 }
 
+.user-info h3 {
+  font-size: 1.5vw;
+}
+
 
 .user-info {
   background-color: #F5F5F5;
@@ -12,7 +16,7 @@
   text-align: center;
 
   p {
-    font-size: 18px;
+    font-size: 2vw;
     padding-left: 17px;
 
   }
@@ -69,6 +73,10 @@
   text-align: center;
 
   p {
-    font-size: 17px;
+    font-size: 1vw;
   }
+}
+
+p {
+  font-size: 1.5vw;
 }

@@ -5,7 +5,7 @@
 
 
  h1 {
-  font-size: 63px;
+  font-size: 4vw;
   text-shadow: 1 1 1 #000;
 }
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 p {
-  font-size: 25px;
+  font-size: 2.5vw;
   text-shadow: 1 1 1 #fff;
   font-family: PT Sans;
 }
@@ -67,7 +67,7 @@ html, body, {
 
 .videobanner p {
   color: white;
-  font-size: 42px;
+  font-size: 2.5vw;
   text-shadow: 1px 1px 1px #000;
   font-family: PT Sans;
 
@@ -75,7 +75,7 @@ html, body, {
 
 .owner {
   position: relative;
-  font-size: 31px;
+  font-size: 2vw;
   color: white;
   background-color: rgba(150, 185, 118, 1);
   border-radius: 18px;
@@ -86,7 +86,7 @@ html, body, {
   box-shadow: 1px 1px 1px #000;
 
   .fa {
-    font-size: 42px;
+    font-size: 2vw;
     color: #1A2930;
   }
 }
@@ -97,7 +97,7 @@ html, body, {
 
 .borrower {
   position: relative;
-  font-size: 31px;
+  font-size: 2vw;
   color: white;
   background-color: rgba(150, 185, 118, 1);
   border-radius: 18px;
@@ -109,7 +109,7 @@ html, body, {
 
 
   .fa {
-    font-size: 42px;
+    font-size: 2vw;
     color: #1A2930;
   }
 }
