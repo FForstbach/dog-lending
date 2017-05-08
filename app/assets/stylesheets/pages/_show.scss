@@ -27,12 +27,12 @@
 }
 
 h2, {
-  font-size: 29px;
+  font-size: 1.5vw;
   text-align: left;
 }
 
 p {
-  font-size: 22px;
+  font-size: 1.5vw;
 }
 
 }
@@ -65,7 +65,11 @@ p {
 
   }
 
-
+img {
+    vertical-align: middle;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
 
 
