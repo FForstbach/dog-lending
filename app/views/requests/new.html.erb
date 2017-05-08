@@ -43,7 +43,7 @@
           </div>
 
 
-        <p><i class="fa fa-comments-o" aria-hidden="true"></i>Start your conversation here</p>
+        <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>Start your conversation here</p>
 
           <%= simple_form_for @request, method: "post" do |f| %>
           <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
