@@ -36,7 +36,7 @@ class DogsController < ApplicationController
     # @dog.user = current_user
     # @dog.location = params[:dog][:location]
     @dog.save
-    redirect_to dogs_path
+    redirect_to dashboard_path
   end
 
   def edit
