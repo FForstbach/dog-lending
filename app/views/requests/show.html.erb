@@ -4,34 +4,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-    <%= link_to "Go back to my requests", requests_path %>
-      <%=  @request.messages.each do |message| %>
-        <% if current_user != message.user %>
-          <div class="col-xs-12">
-            <div class="message received">
-              <p><%= message.created_at.strftime("%A, %d.%m - %H:%M") %></p>
-              <div class="message-content received">
-                <p><%= message.content %></p>
-              </div>
-            </div>
-          </div>
-        <% else %>
-          <div class="col-xs-12">
-            <div class="message sent" id="new_message">
-              <p><%= message.created_at.strftime("%A, %d.%m - %H:%M") %></p>
-              <div class="message-content sent">
-                <p><%= message.content %></p>
-              </div>
-            </div>
-          </div>
-        <% end %>
+   <div id="all-messages">
+      <%= link_to "Go back to my requests", requests_path %>
+      <%  @request_messages.each do |message| %>
+          <%= render "messages/message", message: message %>
       <% end %>
+    </div>
       <hr>
       <%= render "messages/form" %>
-    </div>
   </div>
 </div>
 <hr>
-
 

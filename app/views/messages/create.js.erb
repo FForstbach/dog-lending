@@ -1,0 +1,18 @@
+// app/views/reviews/create.js.erb
+// Here you will write *javascript* that would be executed by the browser
+<% if @message.errors.any? %>
+// Render new message form with errors
+  $('#new_message').html("<%= j render 'messages/form', request: @request, message: @message %>");
+<% else %>
+// Create a paragraph for the new message. But hide it.
+  var new_sent_message = $("<%= j render 'message', message: @message %>");
+
+  // Add it to the DOM, at the end of the existing messages. It's still hidden.
+  console.log($('#all-messages'));
+  $('#all-messages').append(new_sent_message);
+  // Add Audio
+  var audio = new Audio("<%= audio_path("dog_bark_small.mp3") %>");
+  audio.play();
+  // Reset the form
+  $('#new_message').html("<%= j render 'messages/form' %>");
+<% end %>

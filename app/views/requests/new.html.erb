@@ -10,7 +10,7 @@
         <p>So <%= @dog.name %> is a <%= @dog.breed %>, a <%= @dog.size %> dog.</p>
         <p>Favorite snack is PLACEHOLDER_SNACK</p>
         <%= simple_form_for @request, method: "post" do |f| %>
-          <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
+          <%= text_field_tag :'request[messages_attributes][][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
           <%= f.input :dog_id, :as => :hidden %>
           <%= f.submit "Submit your request", class: "btn btn-primary" %>
         <% end %>
