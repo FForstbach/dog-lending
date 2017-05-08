@@ -1,101 +1,96 @@
 .card {
-  height: 341px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   background-size: cover !important;
   color: white;
   position: relative;
   border-radius: 9px;
-  box-shadow: 1px 1px 1px #888888;
+  box-shadow: 1px 1px 1px 1px #888888;
   margin-bottom: 19px;
   background-position: center center;
   text-align: center;
 
   p {
     text-shadow: none;
+    font-size: 17px;
   }
 
   a {
     color: #96B976;
     text-decoration: none;
   }
+  h2 {
+    font-size: 3.0vmax;
+  }
 }
 
-.card.messages {
-  height: 100px;
-  color: white;
+.card-banner {
   position: relative;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #888888;
-  margin: 10px 0;
+  text-align: center;
+
+
 }
 
-.card.messages h2 {
-padding-top: 10px;
-  font-size: 24px;
+#card-user {
+  padding: 5px;
+
 }
 
-.card.messages h3 {
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
-.card.messages p {
-  font-size: 14px;
-  color: black;
-  padding: 0 0 5px 0;
-}
+// .avatar {
+//   position: relative;
+//   bottom: 10px;
+//   box-shadow: 1px 1px 1px #393737;
+//   width: 20px;
+// }
 
-.card-user {
-  position: relative;
-  margin-top: 28px;
-  box-shadow: 1px 1px 1px #393737;
-}
 
-.banner-card {
-  position: relative;
-  top: -85px;
-  color: white;
-  background-color: white;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  left: 0px;
-  height: 79px;
-  margin-top: 14px;
-  padding: -139px;
-  z-index: -1;
-}
+
+
+// .banner-card {
+//   position: relative;
+//   top: -85px;
+//   color: white;
+//   background-color: white;
+//   border-bottom-right-radius: 10px;
+//   border-bottom-left-radius: 10px;
+//   left: 0px;
+//   height: 79px;
+//   margin-top: 14px;
+//   padding: -139px;
+//   z-index: -1;
+// }
 
 
 .card-category {
   position: relative;
   top: 10px;
-  left: -3px;
   font-size: 10px;
   text-transform: uppercase;
 
   h2 {
     color:white;
-  }
-}
-.card-description {
-  position: relative;
-  top: 224px;
-  color: black;
-  z-index: 1;
 
-  .fa {
-    color: black;
-    padding-right: 10px;
   }
-}
-.card-description h2 {
-  font-size: 24px;
 }
 
-.card-description p {
-  font-size: 20px;
-  }
+// .card-description {
+//   position: relative;
+//   top: 224px;
+//   color: black;
+//   z-index: 1;
+
+//   .fa {
+//     color: black;
+//     padding-right: 10px;
+//   }
+// }
+// .card-description h2 {
+//   font-size: 24px;
+// }
+
+// .card-description p {
+//   font-size: 20px;
+//   }
 
 .card-link {
   position: absolute;
