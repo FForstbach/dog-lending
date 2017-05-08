@@ -1,0 +1,44 @@
+.avatar-show {
+    width: 622px;
+    border-radius: 46%;
+    z-index: 2;
+    margin-top: 7%;
+}
+
+img {
+    vertical-align: middle;
+    width: 45%;
+}
+
+.user-info-show img {
+  width: 50%;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.user-info-show h3 {
+  font-size: 1.5vw;
+}
+
+
+.user-info-show {
+  background-color: #F5F5F5;
+
+  padding: 10px;
+  padding-top: 20px;
+  text-align: center;
+
+  p {
+    font-size: 2vw;
+    padding-left: 17px;
+
+  }
+
+  .fa {
+    font-size: 8px;
+    padding-right: 15px;
+
+  }
+
+}
+
+
