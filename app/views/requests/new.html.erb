@@ -1,30 +1,60 @@
 <div class="banner small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@dog.photo_url, :height => 50, :crop => :scale) %>');">
+  <div class="banner-content">
+    <h1>Woof, woof! I can't wait to meet you</h1>
+    <p>You are starting your first conversation with Max Muster</p>
   </div>
 </div>
+</div>
 
-<div class="container">
+
+
+<div class="container_messages">
+
   <div class="row">
-    <div class="col-xs-12 col-md-8">
-      <div class="request-form text-center">
-        <h1>Now it´s getting serious</h1>
-        <p>So <%= @dog.name %> is a <%= @dog.breed %>, a <%= @dog.size %> dog.</p>
-        <p>Favorite snack is PLACEHOLDER_SNACK</p>
-        <%= simple_form_for @request, method: "post" do |f| %>
+
+      <div class="col-xs-12 col-md-4">
+        <div class="user-info">
+        <%= cl_image_tag "Bildschirmfoto_2017-05-08_um_13.14.34_cjmtta", class: "avatar" %>
+        <h3>Robin Kamp</h3>
+        </div>
+      </div>
+
+
+
+      <div class="col-xs-12 col-md-8">
+        <div class="request-form text-center">
+        <p><i class="fa fa-info-circle" aria-hidden="true"></i>The following information is needed<p>
+          <div class="message-info">
+
+            <div class="row-info">
+              <div class="col-xs-12 col-sm-4">
+                <%= cl_image_tag "You_veilnt", class: "message_icons" %>
+                <p>Tell the owner a little bit about yourself</p>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <%= cl_image_tag "experience_rxf2re", class: "message_icons" %>
+                <p>What is your experience with dogs?</p>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <%= cl_image_tag "why_doggy_pbyatc", class: "message_icons" %>
+                <p>What is the reason you chose <%= @dog.name %>?</p>
+                <br><br><br>
+              </div>
+            </div>
+          </div>
+
+
+        <p><i class="fa fa-comments-o" aria-hidden="true"></i>Start your conversation here</p>
+
+          <%= simple_form_for @request, method: "post" do |f| %>
           <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
           <%= f.input :dog_id, :as => :hidden %>
           <%= f.submit "Submit your request", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <div class="dog-info">
-        <img src="<%= @dog.photo %>" alt="user">
-        <h3><%= @dog.name %></h3>
-        <p><%= @dog.breed %></p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
