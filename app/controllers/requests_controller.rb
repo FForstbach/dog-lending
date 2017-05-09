@@ -35,6 +35,7 @@ class RequestsController < ApplicationController
   def show
     @dog = @request.dog
     @request_messages = @request.messages.sort_by {|msg| msg.created_at}
+    @user = current_user
   end
 
   def destroy
