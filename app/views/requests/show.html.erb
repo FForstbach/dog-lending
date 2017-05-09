@@ -1,18 +1,36 @@
-<h1 class="text-center">You talking to <%= @request.dog.name %>*</h1>
-
-<p class="text-center">*Well, it`s actually <%= @request.dog.name %>`s human assistant </p>
-
-<div class="container">
-  <div class="row">
-   <div id="all-messages">
-      <%= link_to "Go back to my requests", requests_path %>
-      <%  @request_messages.each do |message| %>
-          <%= render "messages/message", message: message %>
-      <% end %>
-    </div>
-      <hr>
-      <%= render "messages/form" %>
+<div class="banner small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@dog.photo_url, :height => 50, :crop => :scale) %>');">
+  <div class="banner-content">
+    <%= cl_image_tag "Waumessenger_ng4oat", class: "avatar-show" %>
   </div>
 </div>
-<hr>
+
+<div class="container_messages">
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="user-info-show">
+      <%= cl_image_tag "Bildschirmfoto_2017-05-08_um_13.14.34_cjmtta", class: "avatar" %>
+      <h3>Robin Kamp</h3>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-8">
+      <div class="request-form text-center">
+      <p><i class="fa fa-comments-o" aria-hidden="true"></i>You are talking to Robin Kamp</p>
+        <div class="message-info">
+          <div class="col-xs-12-show">
+            <div id="all-messages">
+              <% link_to "Go back to my requests", requests_path %>
+              <%  @request_messages.each do |message| %>
+                  <%= render "messages/message", message: message %>
+              <% end %>
+              <hr>
+            </div>
+            <%= render "messages/form" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

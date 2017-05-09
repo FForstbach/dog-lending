@@ -1,7 +1,6 @@
 <div class="banner small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@dog.photo_url, :height => 50, :crop => :scale) %>');">
   <div class="banner-content">
-    <h1>Woof, woof! I can't wait to meet you</h1>
-    <p>You are starting your first conversation with Max Muster</p>
+    <p>You are starting your first <%= cl_image_tag "Waumessenger_ng4oat", class: "avatar-request" %> conversation with Max Muster</p>
   </div>
 </div>
 </div>
@@ -44,7 +43,7 @@
           </div>
 
 
-        <p><i class="fa fa-comments-o" aria-hidden="true"></i>Start your conversation here</p>
+        <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>Start your conversation here</p>
 
           <%= simple_form_for @request, method: "post" do |f| %>
             <%= text_field_tag :'request[messages_attributes][][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
