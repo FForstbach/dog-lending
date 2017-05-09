@@ -30,9 +30,10 @@
                 </div>
 
                 <div class="location-wrap">
+                <p><img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60"></p>
                 <p><i class="fa fa-map-marker" aria-hidden="true"></i>
                   <%= dog.location %></p>
-                  <img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60">
+
                 </div>
               </div>
           </div>
@@ -56,9 +57,9 @@
     '<h2>{{{_highlightResult.name.value}}}</h2>'+
     '<div class="card-category"><h4>{{{_highlightResult.breed.value}}}</h4></div>'+
     '<div class="location-wrap">'+
+    '<p><img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60"></p>'+
     '<p><i class="fa fa-map-marker" aria-hidden="true"></i>'+
     '{{{_highlightResult.location.value}}}</p>'+
-    '<img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60">'+
     '</div>'+
     '</div></div></a></div>';
     var search = instantsearch({
@@ -71,9 +72,9 @@
     search.addWidget(
       instantsearch.widgets.searchBox({
         container: '#q',
-        placeholder: 'Please search for name or breed',
+        placeholder: 'Search for name or breed',
         autofocus: false,
-        poweredBy: true
+        poweredBy: false
       })
       );
     search.addWidget(

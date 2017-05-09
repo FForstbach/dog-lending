@@ -3,7 +3,9 @@
   font-size: 25px;
   line-height: 30px;
   width: 30px;
-  color: grey;
+  color: white;
+  border-color: black;
+
 }
 .badge {
   position: absolute;
@@ -12,6 +14,7 @@
   font-size: 10px;
   color: white;
   display: flex;
+  background-color: #32B796;
   align-items: center;
   justify-content: center;
   height: 18px;
