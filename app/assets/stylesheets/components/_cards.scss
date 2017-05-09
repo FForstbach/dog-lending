@@ -23,6 +23,11 @@
   }
 }
 
+.card:hover {
+  opacity: 0.6;
+
+}
+
 .card-banner {
   position: relative;
   text-align: center;
@@ -31,7 +36,7 @@
 }
 
 #card-user {
-  padding-top: 5px;
+  padding-top: 3px;
 
 }
 
@@ -62,7 +67,7 @@
   opacity: 0;
 }
 .card-link:hover{
-  opacity: 0.1;
+  opacity: 0.6;
 }
 
 .container-index {
@@ -73,8 +78,4 @@
   margin-bottom: 20px;
 }
 
-.ais-infinite-hits--showmore {
-  clear: both;
-  text-align: center;
-  margin-top: 20px;
-}
+
