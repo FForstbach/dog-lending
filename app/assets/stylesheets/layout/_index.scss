@@ -9,11 +9,13 @@
 
 
 .location-wrap {
-  color: black;
-  background-color: white;
-  margin-top: 60%;
-  text-align: center;
-  display: grid;
+    color: black;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 
 
  p {
@@ -24,11 +26,9 @@
 
 .fa {
   padding-right: 5px;
-
+}
 }
 
-
-}
 .dog-options {
   position: relative;
 }
@@ -88,22 +88,9 @@
   }
 }
 
-.ais-refinement-list--list {
-  text-align: center;
-
-}
-
-.ais-refinement-list--item {
-
-}
-
-
-.ais-refinement-list--body {
-
-}
 
 .ais-body {
-  border: 1px solid #636363;
+  border: 1px solid #96B976;
 }
 
 .ais-search-box--powered-by {
