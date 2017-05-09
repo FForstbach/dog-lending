@@ -4,12 +4,6 @@
   breed: Golden Retriever
   photo: "angelgrad.jpg"
 
-- name: Dutch
-  size: large
-  description: Energetic male in search of friendly competition and an occasional roll in the grass
-  breed: Black Lab
-  photo: "dogexample.jpg"
-
 - name: Ziggy
   size: small
   description: High maintenance attention seeking purse pup
@@ -112,16 +106,18 @@
   breed: Boxer
   photo: "Bella.jpeg"
 
-- name: Zillow
-  size: medium
-  description: Zillow can be shy, but he has lots of love to give.
-  breed: Boxer
-  photo: "Zillow.jpeg"
+# these two dogs did not successfully get a photo in the seed
 
-- name: Zillow
-  size: medium
-  description: Zillow can be shy, but he has lots of love to give.
-  breed: Boxer
-  photo: "Zillow.jpeg"
+# - name: Zillow
+#   size: medium
+#   description: Zillow can be shy, but he has lots of love to give.
+#   breed: Boxer
+#   photo: "Zillow.jpeg"
+
+  # - name: Dutch
+#   size: large
+#   description: Energetic male in search of friendly competition and an occasional roll in the grass
+#   breed: Black Lab
+#   photo: "dogexample.jpg"
 
 
