@@ -29,6 +29,7 @@ gem "gmaps4rails"
 gem 'devise-i18n'
 gem 'algoliasearch-rails'
 gem 'remotipart', github: 'mshibuya/remotipart'
+gem "letter_opener", group: :development
 gem 'rails_admin', '>= 1.0.0.rc'
   source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
