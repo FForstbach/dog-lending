@@ -17,7 +17,7 @@
           <a href="<%= dashboard_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
           <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
         <% else %>
-          <a href="<%= new_user_registration_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
+          <a href="<%= new_user_registration_path(:type => 'owner') %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
           <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
         <% end %>
 

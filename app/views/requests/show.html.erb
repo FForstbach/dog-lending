@@ -10,17 +10,21 @@
     <div class="col-xs-12 col-md-4">
       <div class="user-info-show">
       <%= cl_image_tag "Bildschirmfoto_2017-05-08_um_13.14.34_cjmtta", class: "avatar" %>
-      <h3>Robin Kamp</h3>
+      <h3><%= @user.first_name %></h3>
+      <div class="go-back">
+      <%= link_to "Go back to my requests", requests_path %>
       </div>
-    </div>
+      </div>
+      </div>
+
 
     <div class="col-xs-12 col-md-8">
       <div class="request-form text-center">
-      <p><i class="fa fa-comments-o" aria-hidden="true"></i>You are talking to Robin Kamp</p>
+      <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>You are talking to <%= @user.first_name %></p>
         <div class="message-info">
           <div class="col-xs-12-show">
             <div id="all-messages">
-              <% link_to "Go back to my requests", requests_path %>
+
               <%  @request_messages.each do |message| %>
                   <%= render "messages/message", message: message %>
               <% end %>
