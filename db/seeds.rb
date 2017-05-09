@@ -25,7 +25,7 @@ end
 
 puts "Creating #{dogs.count} dogs..."
 dogs.each_with_index do |dog, index|
-  d = Dog.find_or_create_by(id: index + 1)
+  d = Dog.find_or_initialize_by(id: index + 1)
   d.user_id ||= User.order("RANDOM()").first.id
   d.name = dog["name"]
   d.age = rand(1..12)
