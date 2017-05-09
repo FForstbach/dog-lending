@@ -21,6 +21,6 @@ class Dog < ApplicationRecord
   end
 
   def url
-    dog_url(id: self.id, host: ActionMailer::Base.default_url_options[:host])
+    dog_path(id: self.id)
   end
 end
