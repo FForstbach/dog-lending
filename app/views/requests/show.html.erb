@@ -1,6 +1,6 @@
 <div class="banner small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path(@dog.photo_url, :height => 50, :crop => :scale) %>');">
   <div class="banner-content">
-    <%= cl_image_tag "Waumessenger_ng4oat", class: "avatar-show" %>
+      <%= cl_image_tag "Waumessenger_ng4oat", class: "avatar-show" %>
   </div>
 </div>
 
@@ -11,16 +11,14 @@
       <div class="user-info-show">
       <%= cl_image_tag "Bildschirmfoto_2017-05-08_um_13.14.34_cjmtta", class: "avatar" %>
       <h3><%= @user.first_name %></h3>
-      <div class="go-back">
-      <%= link_to "Go back to my requests", requests_path %>
-      </div>
+
       </div>
       </div>
 
 
     <div class="col-xs-12 col-md-8">
       <div class="request-form text-center">
-      <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>You are talking to <%= @user.first_name %></p>
+      <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>You are talking to <%= @user.first_name %>
         <div class="message-info">
           <div class="col-xs-12-show">
             <div id="all-messages">

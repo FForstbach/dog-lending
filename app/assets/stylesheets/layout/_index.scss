@@ -3,10 +3,6 @@
 @import "navbar";
 
 
-.container-index {
-}
-
-
 .location-wrap {
   color: black;
   background-color: white;
@@ -24,4 +20,12 @@
   position: relative;
 
 
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
 }
