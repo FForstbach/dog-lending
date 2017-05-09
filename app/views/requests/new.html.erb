@@ -47,9 +47,9 @@
         <p><i class="fa fa-comments-o" aria-hidden="true"></i>Start your conversation here</p>
 
           <%= simple_form_for @request, method: "post" do |f| %>
-          <%= text_field_tag :'messages_attributes[][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
-          <%= f.input :dog_id, :as => :hidden %>
-          <%= f.submit "Submit your request", class: "btn btn-primary" %>
+            <%= text_field_tag :'request[messages_attributes][][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
+            <%= f.input :dog_id, :as => :hidden %>
+            <%= f.submit "Submit your request", class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>

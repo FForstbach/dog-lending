@@ -14,12 +14,10 @@ class MessagesController < ApplicationController
 
     if @message.save
       respond_to do |format|
-        format.html { redirect_to request_path(@request) }
-        format.js # <-- will render `app/views/reviews/create.js.erb` end
+        format.js # <-- will render `app/views/messages/create.js.erb` end
       end
     else
       respond_to do |format|
-        format.html { redirect_to request_path(@request) }
         format.js # <-- idem end
       end
     end
