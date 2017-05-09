@@ -63,3 +63,65 @@
   description: Not neutered
   breed: Meme
   photo: "bepis.jpg"
+
+- name: Lea
+  size: large
+  description: Loves to watch Star Wars (believes she is princess Lea)
+  breed: German shepherd
+  photo: "Lea.jpeg"
+
+- name: Harry
+  size: small
+  description: Harry has a personality crisis - he doesnt't know if he is a poodle or a tiger
+  breed: Poodle
+  photo: "Harry.jpeg"
+
+- name: Spike
+  size: medium
+  description: Spike loves playing with cats but would never hurt them - just wants to play (well, sometimes even love hurts a bit)
+  breed: English Bulldog
+  photo: "Spike.jpeg"
+
+- name: Darla
+  size: medium
+  description: Darla is a real lady, hard to get but worth trying - prefers german shepherds
+  breed: Beagle
+  photo: "Darla.jpeg"
+
+- name: Mambo
+  size: small
+  description: Mambo is a rather vain dog who likes having his hair brushed and groomed
+  breed: Bearded Collie
+  photo: "Mambo.jpeg"
+
+- name: Camille
+  size: small
+  description: Camille is a real "pathfinder" with a very benign charakter
+  breed: Bloodhound
+  photo: "Camille.jpeg"
+
+- name: Hoot
+  size: large
+  description: Hoot is obviously a big dog but sometimes he has the confidence of a chihuahua
+  breed: Labrador Retriever
+  photo: "Hoot.jpeg"
+
+- name: Bella
+  size: medium
+  description: Bella usually wears a hat to emphasise her avantgarde attitude
+  breed: Boxer
+  photo: "Bella.jpeg"
+
+- name: Zillow
+  size: medium
+  description: Zillow can be shy, but he has lots of love to give.
+  breed: Boxer
+  photo: "Zillow.jpeg"
+
+- name: Zillow
+  size: medium
+  description: Zillow can be shy, but he has lots of love to give.
+  breed: Boxer
+  photo: "Zillow.jpeg"
+
+
