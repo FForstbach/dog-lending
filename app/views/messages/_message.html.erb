@@ -1,0 +1,9 @@
+<% type = (current_user == message.user) ? 'sent' : 'received' %>
+<div class="col-xs-12">
+  <div class="message <%= type %>">
+    <p><%= message.created_at.strftime("%A, %d.%m - %H:%M") %></p>
+    <div class="message-content <%= type %>">
+      <p><%= message.content %></p>
+    </div>
+  </div>
+</div>

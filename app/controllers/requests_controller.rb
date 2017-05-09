@@ -3,9 +3,9 @@ class RequestsController < ApplicationController
   before_action :find_request, only: [:show, :destroy]
 
   def new
-    # create IF-clause so that people dont create new requests for the same dog
+    # IF-clause so that people dont create new requests for the same dog
     @dog = Dog.find(params[:dog_id])
-      if Request.all.where(user_id: current_user, dog_id: @dog.id).last.nil?
+      if Request.where(user_id: current_user, dog_id: @dog.id).count == 0
         @request = Request.new
         @request.dog = @dog
         @request.messages.build
@@ -21,8 +21,9 @@ class RequestsController < ApplicationController
     @request = Request.new(strong_params)
     @request.user = current_user
     authorize @request
-    @request.save
-    redirect_to requests_path
+    @request.messages.first.user = current_user
+    @request.save!
+    redirect_to request_path(@request), flash: {notice: "New request created"}
   end
 
   def index
@@ -33,7 +34,7 @@ class RequestsController < ApplicationController
 
   def show
     @dog = @request.dog
-    @message = Message.new
+    @request_messages = @request.messages.sort_by {|msg| msg.created_at}
   end
 
   def destroy
