@@ -137,17 +137,17 @@ html, body, {
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 781px) {
 
 
    .owner {
     position: relative;
-    font-size: 13px;
+    font-size: 3vw;
     color: white;
     background-color: #96b976;
     border-radius: 12px;
     padding: 13px;
-    left: 8%;
+    left: 17%;
     text-shadow: 0 0 0 #000;
     top: 26px;
 
@@ -161,12 +161,12 @@ html, body, {
 
   .borrower {
     position: relative;
-    font-size: 13px;
+    font-size: 3vw;
     color: white;
     background-color: #96b976;
     border-radius: 12px;
     padding: 13px;
-    left: 15%;
+    left: 23%;
     text-shadow: 0 0 0 #000;
     top: 26px;
 
@@ -184,55 +184,88 @@ html, body, {
 }
 
 
+@media only screen and (min-width: 1066px) {
 
-@media only screen and (min-width: 700px) and (max-width: 1065px){
 
+   .owner {
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    background-color: #96b976;
+    border-radius: 12px;
+    padding: 13px;
+    left: 18%;
+    text-shadow: 0 0 0 #000;
+    top: 26px;
 
-.owner {
-left: 12%;
+    .fa {
+      font-size: 20px;
+      color: #1A2930;
+    }
   }
 
 
-.borrower {
-left: 24%;
-  }
 
+  .borrower {
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    background-color: #96b976;
+    border-radius: 12px;
+    padding: 13px;
+    left: 24%;
+    text-shadow: 0 0 0 #000;
+    top: 26px;
+
+    .fa {
+      font-size: 20px;
+      color: #1A2930;
+
+    }
+  }
 }
 
-@media only screen and (min-width: 1140px) and (max-width: 1300px){
+@media only screen and (min-width: 591px) {
 
 
-.owner {
-left: 17%;
+   .owner {
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    background-color: #96b976;
+    border-radius: 12px;
+    padding: 13px;
+    left: 18%;
+    text-shadow: 0 0 0 #000;
+    top: 26px;
+
+    .fa {
+      font-size: 20px;
+      color: #1A2930;
+    }
   }
 
 
-.borrower {
-left: 31%;
+
+  .borrower {
+    position: relative;
+    font-size: 3vw;
+    color: white;
+    background-color: #96b976;
+    border-radius: 12px;
+    padding: 13px;
+    left: 27%;
+    text-shadow: 0 0 0 #000;
+    top: 26px;
+
+    .fa {
+      font-size: 20px;
+      color: #1A2930;
+
+    }
   }
-
 }
 
-@media only screen and (min-width: 1301px) and (max-width: 1500px){
-
-
-.owner {
-left: 17%;
-  }
-
-
-.borrower {
-left: 31%;
-  }
-
-}
-
-@media only screen and (max-width: 375px) {
-
-.container {
-  margin-top: -375px;
-}
-}
 
 
 
