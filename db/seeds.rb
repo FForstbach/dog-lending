@@ -22,11 +22,15 @@ puts dogs.size
 
 Dog.clear_index!
 
-
 if User.count == 0
+  seed_users = Rails.root.join('db', 'seeds', 'users.yml')
+  users = YAML::load_file(seed_users)
+  puts "We have #{users.count} users in users.yml"
   puts "Creating users"
-  10.times do
-    u = User.new(email: Faker::Internet.free_email, password: "123456")
+  users.each_with_index do |user, index|
+    u = User.new(user)
+    u.password = "123456"
+    u.password_confirmation = "123456"
     u.save!
   end
 else
