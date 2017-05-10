@@ -3,11 +3,6 @@
 @import "navbar";
 
 
-.container-index {
-
-}
-
-
 .location-wrap {
     color: black;
     background-color: white;
@@ -63,6 +58,15 @@
 }
 
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+
 .ais-infinite-hits--showmore {
   clear: both;
   text-align: center;
@@ -88,7 +92,6 @@
   }
 }
 
-
 .ais-body {
   border: 1px solid #96B976;
 }
@@ -102,13 +105,9 @@
   margin-top: 5px;
   padding-bottom: 10px;
 
-a {
-  color: white;
-  font-size: 10px;
+  a {
+    color: white;
+    font-size: 10px;
+  }
 
 }
-
-}
-
-
-
