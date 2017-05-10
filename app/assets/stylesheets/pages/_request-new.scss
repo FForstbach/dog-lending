@@ -36,13 +36,11 @@
 }
 
 .avatar-request {
-
   vertical-align: middle;
   width: 35%;
-  /* padding-left: 52px; */
-  margin-right: -50px;
-  margin-top: -17px;
-  margin-left: -60px;
+  margin-right: -5px;
+  margin-top: -10px;
+  margin-left: -3px;
 }
 
 
@@ -114,22 +112,6 @@ p {
 
 }
 
-@media only screen and (max-width: 1298px) {
-
-.avatar-request {
-    vertical-align: middle;
-    width: 42%;
-    /* padding-left: 52px; */
-    margin-right: -50px;
-    margin-top: -17px;
-    margin-left: -60px;
-    max-width: 100%;
-    height: auto;
-    padding: 15px;
-    width: auto\9;
-}
-}
-
 
 .card-request {
   width: 100%;
@@ -148,7 +130,12 @@ p {
     font-size: 2.5vw;
     color: white;
     text-align: center;
+    text-shadow: 1px 1px 1px #000;
     }
+}
+
+.banner-content {
+  margin-top: 70px;
 }
 
 
