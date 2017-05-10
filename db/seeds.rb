@@ -54,7 +54,7 @@ dogs.each_with_index do |dog, index|
     d.photo = File.open(photo_path)
   end
   d.location = ["Hauptstr. ","Torstr. ","Kantstr. ","Seestr. ","Sonnenallee ","Berliner Str. ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin"
-  d.favorite_snack = ["Pizza crust", "Cheezburger," "Other dogs feces," "Filet Mignon", "Anything I can find", "Lasagne", "Currywurst", "an ice cube", "ice cream", "Meatballs", "Grass"].sample
+  d.favorite_snack = ["pizza crust", "cheezburger," "other dogs feces," "Filet Mignon", "anything I can find", "lasagne", "currywurst", "an ice cube", "ice cream", "a meatball", "grass"].sample
   d.favorite_toy = ["Chewy Vuitton Bone", "Chewlululemon Mat", "Pugg Boot", "the family cat", "Diane von Furstinbone", "Tennis ball" ].sample
   d.save!
   print "."

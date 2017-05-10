@@ -60,49 +60,49 @@
 
 - name: Lea
   size: large
-  description: Loves to watch Star Wars (believes she is princess Lea)
+  description: Loves to watch Star Wars (believes she is princess Leia)
   breed: German shepherd
   photo: "Lea.jpeg"
 
 - name: Harry
   size: small
-  description: Harry has a personality crisis - he doesnt't know if he is a poodle or a tiger
+  description: Has a personality crisis - he doesnt't know if he is a poodle or a tiger
   breed: Poodle
   photo: "Harry.jpeg"
 
 - name: Spike
   size: medium
-  description: Spike loves playing with cats but would never hurt them - just wants to play (well, sometimes even love hurts a bit)
+  description: Loves to play with kittens but would never hurt them - love is a bit ruff though right?
   breed: English Bulldog
   photo: "Spike.jpeg"
 
 - name: Darla
   size: medium
-  description: Darla is a real lady, hard to get but worth trying - prefers german shepherds
+  description: Darla is a real lady, hard to get but worth trying - she is quite fond of German Shepherds
   breed: Beagle
   photo: "Darla.jpeg"
 
 - name: Mambo
   size: small
-  description: Mambo is a rather vain dog who likes having his hair brushed and groomed
+  description: Enjoys the doggy spa, getting groomed, and a good belly rub
   breed: Bearded Collie
   photo: "Mambo.jpeg"
 
 - name: Camille
   size: small
-  description: Camille is a real "pathfinder" with a very benign charakter
+  description: Camille is a real "pathfinder" with a benign personality
   breed: Bloodhound
   photo: "Camille.jpeg"
 
 - name: Hoot
   size: large
-  description: Hoot is obviously a big dog but sometimes he has the confidence of a chihuahua
+  description: Big dog with the confidence of a Chihuahua
   breed: Labrador Retriever
   photo: "Hoot.jpeg"
 
 - name: Bella
   size: medium
-  description: Bella usually wears a hat to emphasise her avantgarde attitude
+  description: Accessorizes with the latest fashions
   breed: Boxer
   photo: "Bella.jpeg"
 
