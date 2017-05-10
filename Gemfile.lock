@@ -302,6 +302,7 @@ DEPENDENCIES
   rails_admin (>= 1.0.0.rc)
   redis
   remotipart!
+  rest-client
   sass-rails
   simple_form
   spring
