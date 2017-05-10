@@ -41,6 +41,7 @@
 }
 
 
+
 .ais-header {
   color: #96B976;
   text-align: center;
@@ -87,7 +88,7 @@ body {
   }
 
   button[disabled] {
-    opacity: 0.3;
+    visibility: hidden;
 
   }
 }
