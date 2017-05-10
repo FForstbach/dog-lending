@@ -1,42 +1,46 @@
-.user-info img {
-  width: 50%;
-  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-}
-
-.user-info h3 {
-  font-size: 1.5vw;
-}
-
 
 .user-info {
   background-color: #F5F5F5;
 
-  padding: 10px;
-  padding-top: 20px;
-  text-align: center;
+
+  h3 {
+    font-size: 1.5vw;
+    text-align: left;
+  }
 
   p {
-    font-size: 2vw;
-    padding-left: 17px;
+    font-size: 1vw;
+    text-align: left;
+    margin-left: 39px;
 
   }
 
-  .fa {
-    font-size: 8px;
-    padding-right: 15px;
-
+  .paw {
+    margin-right: 14px;
+    color: #96B976;
   }
+
+  .user {
+    margin-right: 20px;
+    color: #96B976;
+  }
+
+  .loc {
+    margin-right: 25px;
+    color: #96B976;
+  }
+
+
+
 
 }
 
 .avatar-request {
-
   vertical-align: middle;
   width: 35%;
-  /* padding-left: 52px; */
-  margin-right: -50px;
-  margin-top: -17px;
-  margin-left: -60px;
+  margin-right: -5px;
+  margin-top: -10px;
+  margin-left: -3px;
 }
 
 
@@ -51,8 +55,7 @@
   margin-top: 20px;
 
   .row {
-    margin-left: -45px;
-    margin-right: -15px;
+    margin-bottom: 20px;
 }
 }
 
@@ -61,6 +64,7 @@
   border-left: 1px solid #ccc;
   padding-left: 60px;
   padding-bottom: 44px;
+  min-height: 600px;
 
   .fa {
   font-size: 30px;
@@ -100,22 +104,39 @@ p {
     font-size: 2vw;
     font-weight: lighter;
     color: white;
-    margin-bottom: -78px;
+
 }
 
-@media only screen and (max-width: 1298px) {
+.banner-content h3 {
+    color: white;
 
-.avatar-request {
-    vertical-align: middle;
-    width: 42%;
-    /* padding-left: 52px; */
-    margin-right: -50px;
-    margin-top: -17px;
-    margin-left: -60px;
-    max-width: 100%;
-    height: auto;
-    padding: 15px;
-    width: auto\9;
 }
+
+
+.card-request {
+  width: 100%;
+  height: 16vw;
+  background-position: center center;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px 1px #888888;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 20px;
+
+
+    h3 {
+    font-size: 2.5vw;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    }
 }
+
+.banner-content {
+  margin-top: 70px;
+}
+
+
 

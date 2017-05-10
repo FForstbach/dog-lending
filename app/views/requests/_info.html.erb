@@ -1,0 +1,13 @@
+<div class="user-info">
+        <div class="card-request" style="background-image: url('<%= cl_image_path @dog.photo %>');">
+        <h3><%= @dog.name %></h3>
+        </div>
+            <h3><i class="fa fa-paw paw" aria-hidden="true"></i>I am a</h3>
+            <p><%= @dog.breed %></p>
+
+            <h3><i class="fa fa-user user" aria-hidden="true"></i>I belong to</h3>
+            <p><%= @dog.user.email %></p>
+
+            <h3><i class="fa fa-map-marker loc" aria-hidden="true"></i>I live at</h3>
+            <p><%= @dog.location %></p>
+          </div>
