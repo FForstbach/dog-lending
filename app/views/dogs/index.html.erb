@@ -23,6 +23,7 @@
           <%= link_to dog_path(dog) do %>
           <div class="dog-options">
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( '<%= cl_image_path dog.photo_url %>' );">
+            <div class="name">
                 <h2><%= dog.name %></h2>
                 <div class="card-category">
 

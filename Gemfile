@@ -28,6 +28,7 @@ gem "coffee-rails"
 gem "gmaps4rails"
 gem 'devise-i18n'
 gem 'algoliasearch-rails'
+gem "rest-client"
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem "letter_opener", group: :development
 gem 'rails_admin', '>= 1.0.0.rc'

@@ -1,4 +1,3 @@
-
 .box-dog {
   background-color: rgba(128, 128, 128, 0.08);
   padding-right: 30px;
@@ -7,38 +6,34 @@
   margin-left: 120px;
   margin-top: 20px;
 
-.btn-primary {
+  .btn-primary {
+    padding: 10px;
+  }
 
-  padding: 10px;
-}
+  .back {
+    background-color: rgba(0, 0, 0, 0.32);
+  }
 
-.back {
-  background-color: rgba(0, 0, 0, 0.32);
+  .fa {
+    padding-right: 15px;
+  }
 
-}
+  .row {
+    padding-top: 30px;
+  }
 
-.fa {
-  padding-right: 15px;
-}
+  h2 {
+    font-size: 1.5vw;
+    text-align: left;
+    padding-bottom: 15px;
+  }
 
-.row {
-  padding-top: 30px;
-
-}
-
-h2, {
-  font-size: 1.5vw;
-  text-align: left;
-  padding-bottom: 15px;
-}
-
-p {
-  font-size: 1.5vw;
-  padding-top: -18px;
-  margin-top: -22px;
-  margin-left: 35px;
-
-}
+  p {
+    font-size: 1.5vw;
+    padding-top: -18px;
+    margin-top: -22px;
+    margin-left: 35px;
+  }
 
 }
 
@@ -46,34 +41,24 @@ p {
   width: 100%;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #3D3D3B;
-
-
 }
 
 .dogsize {
   width: 74%;
 }
 
-
 .banner-content {
 
-  padding-top: 51px;
-
-  .fa {
-    padding-right: 8px;
-  }
-
   .back-top {
-  background-color: rgba(0, 0, 0, 0.32);
-  margin-right: 15px;
-  border: 1px solid #f5f5f5;
-
-}
+    background-color: rgba(0, 0, 0, 0.32);
+    margin-right: 15px;
+    border: 1px solid #f5f5f5;
+  }
 
 }
 
 .map-show {
-img {
+  img {
     vertical-align: middle;
     margin-bottom: 20px;
     width: 100%;
@@ -81,8 +66,8 @@ img {
 }
 
 .buttons-top {
-    margin-top: 119px;
-  }
+  margin-top: 119px;
+}
 
 
 

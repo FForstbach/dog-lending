@@ -1,27 +1,28 @@
 // Your footer style
 .footer-bottom {
   background-color: #1A2930;
-  min-height: 57px;
-  width: 100%;
   color: white;
-  padding-top: 14px;
-  padding-left: 10px;
-  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 42px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 5px;
+
 }
 
-.footer p {
+.footer-bottom p {
   font-family: 'Gudea', sans-serif;
-  font-size: 0.5em;
+  font-size: 1.5em;
+  margin: 0px;
 }
 
-.footer p {
-  font-family: 'Gudea', sans-serif;
-  flex: 1;
-  font-size: 20px;
-}
 
 @media only screen and (min-width: 375px) {
   p {
     font-size: 10px;
   }
 }
+
+
