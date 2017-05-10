@@ -1,6 +1,6 @@
 .card {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  background-size: cover !important;
+  // text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: white;
   color: white;
   position: relative;
   border-radius: 9px;
@@ -14,7 +14,7 @@
   p {
     text-shadow: none;
     font-size: 17px;
-    margin-top: 10px;
+    margin-top: 14px;
   }
 
   a {
@@ -24,8 +24,18 @@
   h2 {
     font-size: 3.0vmax;
     margin: 0;
+
   }
 }
+
+.card-img {
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    height: 69%;
+
+  }
+
+
 
 .card:hover {
   opacity: 0.6;
@@ -48,14 +58,18 @@
 
 .card-category {
   position: relative;
-  top: 10px;
+  // top: 10px;
   font-size: 10px;
   text-transform: uppercase;
 
   h2 {
     color:white;
-
   }
+
+  h4 {
+    font-size: 20px;
+  }
+
 }
 
 
