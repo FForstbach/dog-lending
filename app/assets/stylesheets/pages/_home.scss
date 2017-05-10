@@ -21,22 +21,8 @@ p {
 }
 
 a:hover, a:focus {
-    color: white;
-    text-decoration: none;
-}
-
-
-
-@media only screen and (min-width: 375px) {
-  .video_box {
-    overflow: hidden;
-    height: calc(100vh - 70px);
-  }
-
-  .embed-responsive video {
-      top: -7%;
-
-  }
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -74,8 +60,8 @@ a:hover, a:focus {
   color: white;
   background-color: rgba(150, 185, 118, 1);
   border-radius: 18px;
-  padding: 19px;
-  left: 28%;
+  padding: 16px;
+  left: 26%;
   text-shadow: 1px 1px 1px #000;
   top: 50px;
   box-shadow: 1px 1px 1px #000;
@@ -83,6 +69,7 @@ a:hover, a:focus {
   .fa {
     font-size: 2vw;
     color: #1A2930;
+    margin-right: 5px;
   }
 }
 
@@ -96,8 +83,8 @@ a:hover, a:focus {
   color: white;
   background-color: rgba(150, 185, 118, 1);
   border-radius: 18px;
-  padding: 19px;
-  left: 38%;
+  padding: 16px;
+  left: 31%;
   text-shadow: 1px 1px 1px #000;
   top: 50px;
   box-shadow: 1px 1px 1px #000;
@@ -106,6 +93,7 @@ a:hover, a:focus {
   .fa {
     font-size: 2vw;
     color: #1A2930;
+    margin-right: 5px;
   }
 }
 
@@ -117,6 +105,7 @@ a:hover, a:focus {
 
 
 @media only screen and (max-width: 375px) {
+
   h1 {
   font-size: 20px;
   }
@@ -126,139 +115,32 @@ a:hover, a:focus {
   }
 
   .videobanner p {
-
   font-size: 15px;
-
-}
-}
-
-
-@media only screen and (min-width: 781px) {
-
-
-   .owner {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 17%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-    }
   }
 
+  .video_box {
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  }
+
+  .embed-responsive video {
+  top: -7%;
+  }
+}
 
 
+@media only screen and (min-width: 1000px - 1600px) {
   .borrower {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 23%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-
-    }
+    left: 10px;
   }
 }
 
 
-.container {
+.row-icons {
   text-align: center;
-}
 
-
-@media only screen and (min-width: 1066px) {
-
-
-   .owner {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 18%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-    }
-  }
-
-
-
-  .borrower {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 24%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-
-    }
-  }
-}
-
-@media only screen and (min-width: 591px) {
-
-
-   .owner {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 18%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-    }
-  }
-
-
-
-  .borrower {
-    position: relative;
-    font-size: 3vw;
-    color: white;
-    background-color: #96b976;
-    border-radius: 12px;
-    padding: 13px;
-    left: 27%;
-    text-shadow: 0 0 0 #000;
-    top: 26px;
-
-    .fa {
-      font-size: 20px;
-      color: #1A2930;
-
-    }
+  p {
+    font-size: 2vw;
   }
 }
 

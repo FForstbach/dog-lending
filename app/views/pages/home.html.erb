@@ -11,8 +11,6 @@
           <p class="text-center">to share the <i class="fa fa-heart" aria-hidden="true">
           </i> for dogs with locals</p>
         </div>
-
-        <div class="banner-content">
         <% if user_signed_in? %>
           <a href="<%= dashboard_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
           <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
@@ -23,17 +21,18 @@
 
 
 
-        </div>
+
       </div>
     </div>
   </div>
 
 
 
-    <div class="container text centered">
+    <div class="container text-center">
       <h2 class="text-center">How it works</h2>
-      <br><br>
-      <div class="row">
+      <hr>
+
+      <div class="row-icons">
         <div class="col-xs-12 col-sm-4">
           <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
           <p>Create a profile</p>
@@ -45,17 +44,20 @@
         <div class="col-xs-12 col-sm-4">
           <%= cl_image_tag "shareyourlove_pa4bhb", class: "venues" %>
           <p>Share your love</p>
-          <br><br><br>
+
         </div>
       </div>
-      <hr>
+
+
       <div class="row">
         <div class="col-xs-12">
+        <hr>
           <h2>Plenty of dogs are waiting for you</h2>
         </div>
       </div>
-    </div>
-     <div class="map home">
+       <div class="map home">
             <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @dog_locations %>&zoom=11&size=640x400&&scale=2&maptype=roadmap
           &markers=size:mid%7Ccolor:red%7C<%= @dog_locations %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="This is a map">
-          </div>
+      </div>
+    </div>
+
