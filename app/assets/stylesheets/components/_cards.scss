@@ -8,10 +8,13 @@
   margin-bottom: 19px;
   background-position: center center;
   text-align: center;
+  height: 380px;
+  padding: 20px 10px 0;
 
   p {
     text-shadow: none;
     font-size: 17px;
+    margin-top: 10px;
   }
 
   a {
@@ -20,6 +23,7 @@
   }
   h2 {
     font-size: 3.0vmax;
+    margin: 0;
   }
 }
 

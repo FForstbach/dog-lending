@@ -4,11 +4,13 @@
 
 
 .location-wrap {
-  color: black;
-  background-color: white;
-  margin-top: 60%;
-  text-align: center;
-  display: grid;
+    color: black;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 
 
  p {
@@ -19,18 +21,28 @@
 
 .fa {
   padding-right: 5px;
-
+}
 }
 
-
-}
 .dog-options {
   position: relative;
 }
 
 
+.ais-search-box--input {
+  border: 2px dotted white;
+  font-family: "PT Sans";
+  height: 40px;
+  padding: 0 8px;
+  width: 100%;
+  color: #636363;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
 .ais-header {
-  color: #D23333;
+  color: #96B976;
   text-align: center;
   font-family: "Itim", "Helvetica", "sans-serif";
   text-transform: uppercase;
@@ -40,8 +52,8 @@
 
 .ais-refinement-list--label {
   color: black;
-  font-family: "Itim", "Helvetica", "sans-serif";
-  font-size: 20px;
+  font-family: "PT Sans", "Helvetica", "sans-serif";
+  font-size: 17px;
 
 }
 
@@ -60,5 +72,42 @@ body {
   text-align: center;
   margin-top: 20px;
 
+  button {
+    border-radius: 5px;
+    line-height: 32px;
+    background-color: transparent;
+    color: #1A2930;
+    border: 2px solid #1A2930;
+  }
+
+  button:hover {
+    color: white;
+    background: #96B976;
+    border-color: #96B976;
+  }
+
+  button[disabled] {
+    opacity: 0.3;
+
+  }
 }
 
+.ais-body {
+  border: 1px solid #96B976;
+}
+
+.ais-search-box--powered-by {
+  font-family: "PT Sans", "Helvetica", "sans-serif";
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-bottom: 10px;
+
+  a {
+    color: white;
+    font-size: 10px;
+  }
+
+}
