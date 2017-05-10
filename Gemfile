@@ -27,6 +27,7 @@ gem 'geocoder'
 gem "coffee-rails"
 gem "gmaps4rails"
 gem 'devise-i18n'
+gem 'omniauth-facebook'
 gem 'algoliasearch-rails'
 gem "rest-client"
 gem 'remotipart', github: 'mshibuya/remotipart'
