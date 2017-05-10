@@ -1,7 +1,7 @@
 class Dog < ApplicationRecord
   include Rails.application.routes.url_helpers
   belongs_to :user
-  has_many :users
+  has_many :requests
 
   geocoded_by :location
   after_validation :geocode, if: :location_changed?
