@@ -28,12 +28,20 @@ namespace :petfinder do
       else
         breed = data["petfinder"]["pet"]["breeds"]["breed"]["$t"]
       end
+
+      next if data["petfinder"]["pet"]["media"].empty?
+
+      if data["petfinder"]["pet"]["media"]["photos"]["photo"].kind_of?(Array)
+        photo = data["petfinder"]["pet"]["media"]["photos"]["photo"][3]["$t"]
+      else
+        photo = data["petfinder"]["pet"]["media"]["photos"]["photo"]["$t"]
+      end
       dogs << {
-        name: data["petfinder"]["pet"]["name"]["$t"],
-        size: sizes[data["petfinder"]["pet"]["size"]["$t"]],
-        description: data["petfinder"]["pet"]["description"]["$t"],
-        breed: breed,
-        photo: data["petfinder"]["pet"]["media"]["photos"]["photo"][0]["$t"]
+        'name' => data["petfinder"]["pet"]["name"]["$t"],
+        'size' => sizes[data["petfinder"]["pet"]["size"]["$t"]],
+        'description' => data["petfinder"]["pet"]["description"]["$t"],
+        'breed' => breed,
+        'photo' => photo
       }
     end
 
