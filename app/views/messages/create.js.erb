@@ -8,10 +8,16 @@
   var new_sent_message = $("<%= j render 'message', message: @message %>");
 
   // Add it to the DOM, at the end of the existing messages. It's still hidden.
-  $('#all-messages').append(new_sent_message);
+  // $('#all-messages').append(new_sent_message);
+
+  window.refreshCall();
   // Add Audio
   var audio = new Audio("<%= audio_path("dog_bark_small.mp3") %>");
   audio.play();
   // Reset the form
   $('#new_message').html("<%= j render 'messages/form' %>");
+
+
+  $( "#message_content" ).focus();
+
 <% end %>
