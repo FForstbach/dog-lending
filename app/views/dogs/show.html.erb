@@ -6,23 +6,35 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @dog.photo_url %>');">
   <div class="banner-content">
     <h1>Woof! My name is <%= @dog.name %></h1>
-    <p>Do you want to play? Click the button below to ask my owner!</p>
-    <div class="buttons-top">
-      <%= link_to "Go back to overview", dogs_path, class: "btn btn-primary btn-lg back-top" %>
-      <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg" do %>
-      <i class="fa fa-inbox"></i>
-      Message me
-      <% end %>
-    </div>
+
   </div>
 </div>
 
 
+  <div class="card-profile">
+    <div class="banner-content text-center">
+      <div class="card-show-top" style="background-image: url('<%= cl_image_path @dog.photo %>');">
+
+        <%= link_to dogs_path, class: "btn btn-primary btn-lg back-top" do %>
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        Go back
+        <% end %>
+        <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg back-top-right" do %>
+        <i class="fa fa-inbox"></i>
+        Message me
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 <div class="box-dog">
+
   <div class="row">
 
-    <div class="col-xs-12 col-sm-6 about">
       <h2><i class="fa fa-info-circle" aria-hidden="true"></i><%= "A little bit about #{@dog.name}!" %></h2>
       <p><%= @dog.description %></p>
       <h2><i class="fa fa-paw" aria-hidden="true"></i><%= "I am a #{@dog.breed}" %></h2>
@@ -43,12 +55,9 @@
 
     </div>
     <div class="col-xs-12 col-sm-6">
-      <h2><i class="fa fa-map-marker" aria-hidden="true"></i>Where can you find me?</h2>
+    <h2><i class="fa fa-info-circle" aria-hidden="true"></i><%= "A little bit about #{@dog.name}!" %></h2>
+      <p><%= @dog.description %></p>
 
-      <p><%= @dog.location %></p>
-      <div class="map-show">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @dog.latitude %>,<%= @dog.longitude %>&zoom=16&size=600x300&maptype=roadmap
-        &markers=color:green%7Clabel:S%7C<%= @dog.latitude %>,<%= @dog.longitude %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="This is a map">
       </div>
 
 
