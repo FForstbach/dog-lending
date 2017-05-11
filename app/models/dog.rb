@@ -16,6 +16,9 @@ class Dog < ApplicationRecord
     attribute :photo do
       self.photo_url
     end
+    attribute :user_photo do
+      self.user.photo_url
+    end
     attributesForFaceting [:breed, :size]
     geoloc :latitude, :longitude
   end

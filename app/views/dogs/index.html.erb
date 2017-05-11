@@ -6,9 +6,6 @@
   </div>
 </div>
 
-
-
-
 <div class="container-index">
   <div class="row">
     <div class="col-xs-12 col-sm-2" id="facets">
@@ -33,7 +30,7 @@
                 </div>
 
                 <div class="location-wrap">
-                  <p><img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60"></p>
+                  <p><img class="avatar" id="card-user" src="<%= cl_image_path dog.user.photo_url || "http://www.fillmurray.com/g/60/60" %>"></p>
                   <div class="card-category">
                     <p><h4><%= dog.breed %></h4></p>
                     <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= dog.location %></p>
@@ -41,17 +38,16 @@
 
                 </div>
               </div>
-              </div>
+            </div>
           </div>
           <% end %>
-          </div>
-          <% end %>
+        </div>
+        <% end %>
       </div>
     </div>
 
   </div>
 </div>
-
 
 <% content_for(:after_js) do %>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
@@ -73,7 +69,7 @@
     var hitTemplate=' <div class="col-xs-12 col-md-6 col-lg-4"><a href="{{{url}}}"><div class="dog-options"><div class="card"><div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(\'{{{photo}}}\');">'+
     '<div class="name"><h2>{{{_highlightResult.name.value}}}</h2></div>'+
     '<div class="location-wrap">'+
-    '<p><img class="avatar" id="card-user" src="http://www.fillmurray.com/g/60/60"></p>'+
+    '<p><img class="avatar" id="card-user" src="{{{user_photo}}}"></p>'+
     '<div class="card-category"><h4>{{{_highlightResult.breed.value}}}</h4></div>'+
     '<p><i class="fa fa-map-marker" aria-hidden="true"></i>'+
     '{{{_highlightResult.location.value}}}</p>'+

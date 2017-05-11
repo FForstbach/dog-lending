@@ -31,6 +31,8 @@ if User.count == 0
     u = User.new(user)
     u.password = "123456"
     # u.password_confirmation = "123456"
+    photo_path = File.join(Rails.root, "app/assets/images/Users", user["photo"])
+    u.photo = File.open(photo_path)
     u.save!
   end
 else
