@@ -11,15 +11,11 @@
           <p class="text-center">borrow a dog <i class="fa fa-heart" aria-hidden="true">
           </i> near you</p>
 
-        <% if user_signed_in? %>
 
           <div class="center">
 
           <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>Find a dog!</a>
-        <% else %>
 
-          <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>Find a dog!</a>
-        <% end %>
         </div>
 
 
