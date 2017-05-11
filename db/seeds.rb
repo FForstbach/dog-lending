@@ -30,7 +30,7 @@ if User.count == 0
   users.each_with_index do |user, index|
     u = User.new(user)
     u.password = "123456"
-    u.password_confirmation = "123456"
+    # u.password_confirmation = "123456"
     u.save!
   end
 else
@@ -60,6 +60,13 @@ dogs.each_with_index do |dog, index|
   print "."
 end
 
+puts "\nAssigning a dog to Robin"
 
+u = User.find_by(email: "robin.kamp@pixeed.com")
+u.dogs.destroy_all
+
+d = Dog.find_by(name: "Teddy")
+d.user = User.find_by(email: "robin.kamp@pixeed.com")
+d.save!
 
 
