@@ -33,7 +33,7 @@
     font-size: 1.5vw;
     padding-top: -18px;
     margin-top: -22px;
-    margin-left: 35px;
+    margin-left: 41px;
   }
 
 }
@@ -45,7 +45,7 @@
 }
 
 .dogsize {
-  width: 74%;
+  width: 55%;
 }
 
 .banner-content {
@@ -56,7 +56,15 @@
     border: 1px solid #f5f5f5;
     margin-left: 200%;
     margin-bottom: 3%;
+    box-shadow: 1px 1px 1px 1px #888888;
+
   }
+
+  .back-top:hover {
+    background-color: rgba(0,0,0,0.5);
+    margin-bottom: 4%;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
 
   .back-top-right {
     background-color: #96B976;
@@ -64,7 +72,14 @@
     border: 1px solid #f5f5f5;
     margin-left: 14%;
     margin-bottom: 3%;
+    box-shadow: 1px 1px 1px 1px #888888;
   }
+
+  .back-top-right:hover {
+    background-color: rgba(60,118,61,0.75);
+    margin-bottom: 4%;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
 
   .doggyname {
     background-color: rgba(150, 185, 118, 0);
