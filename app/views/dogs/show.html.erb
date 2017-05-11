@@ -46,7 +46,6 @@
         <% if @dog.size == "small" %>
         <%= cl_image_tag "smalldog_wjdiol", class: "dogsize" %>
         <% elsif @dog.size == "medium" %>
-
         <%= cl_image_tag "mediumdog_xtfaxd", class: "dogsize" %>
 
         <% elsif @dog.size == "large" %>
@@ -54,6 +53,7 @@
 
         <% end %>
         <h2><i class="fa fa-cutlery" aria-hidden="true"></i>My favorite snack is <%= @dog.favorite_snack %></h2>
+        <h2><i class="fa fa-calendar" aria-hidden="true"></i>I am available on <%= @dog.availability %></h2>
 
       </div>
       <div class="col-xs-12 col-sm-6">

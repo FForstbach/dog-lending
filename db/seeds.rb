@@ -56,6 +56,7 @@ dogs.each_with_index do |dog, index|
   d.location = ["Hauptstr. ","Torstr. ","Kantstr. ","Linienstrasse ","Sonnenallee ","Lichtenraderstrasse ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin"
   d.favorite_snack = ["pizza crust", "cheezburger," "other dogs' feces," "Filet Mignon", "anything I can find", "lasagne", "currywurst", "an ice cube", "ice cream", "a meatball", "grass"].sample
   d.favorite_toy = ["Chewy Vuitton Bone", "Chewlululemon Mat", "Pugg Boot", "the family cat", "Diane von Furstinbone", "Tennis ball" ].sample
+  d.availability = ["weekdays", "weekends","holidays"].sample
   d.save!
   print "."
 end
