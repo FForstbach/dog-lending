@@ -53,8 +53,8 @@ dogs.each_with_index do |dog, index|
     photo_path = File.join(Rails.root, "app/assets/images", dog["photo"])
     d.photo = File.open(photo_path)
   end
-  d.location = ["Hauptstr. ","Torstr. ","Kantstr. ","Linienstrasse ","Sonnenallee ","Lichtenraderstrasse ", "Landsberger Allee "].sample + rand(1..80).to_s + ", Berlin"
-  d.favorite_snack = ["pizza crust", "cheezburger," "other dogs' feces," "Filet Mignon", "anything I can find", "lasagne", "currywurst", "an ice cube", "ice cream", "a meatball", "grass"].sample
+  d.location = ["Hauptstr. ","Torstr. ","Kantstr. ","Linienstrasse ","Sonnenallee ","Lichtenraderstrasse ", "Landsberger Allee ", "Auguststrasse", "Potsdamer Platz", "Landsberger Allee", "Hansastraße", "Heinersdorfer Strasse", "Bahnhofstraße", "Hochstraße", "Urbanstraße", "Berliner Straße", "Buchberger Straße", "Lückstraße", "Arnulfstraße", "Grazer Damm", "Huberstusallee", "Sickingenstraße", "Wielandstraße", "Pohlstraße", "Ritterstraße", "Mohrenstraße", "Tieckstraße"].sample + rand(1..80).to_s + ", Berlin"
+  d.favorite_snack = ["pizza crust", "cheezburger", "other dogs' feces", "Filet Mignon", "anything I can find", "lasagne", "currywurst", "an ice cube", "ice cream", "a meatball", "grass"].sample
   d.favorite_toy = ["Chewy Vuitton Bone", "Chewlululemon Mat", "Pugg Boot", "the family cat", "Diane von Furstinbone", "Tennis ball" ].sample
   d.save!
   print "."
