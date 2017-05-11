@@ -30,7 +30,7 @@ if User.count == 0
   users.each_with_index do |user, index|
     u = User.new(user)
     u.password = "123456"
-    u.password_confirmation = "123456"
+    # u.password_confirmation = "123456"
     u.save!
   end
 else
