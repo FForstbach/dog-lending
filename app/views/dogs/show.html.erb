@@ -3,58 +3,75 @@
 <% content_for :meta_image, cloudinary_url(@dog.photo.path) %>
 
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @dog.photo_url %>');">
-  <div class="banner-content">
-    <h1>Woof! My name is <%= @dog.name %></h1>
-    <p>Do you want to play? Click the button below to ask my owner!</p>
-    <div class="buttons-top">
-      <%= link_to "Go back to overview", dogs_path, class: "btn btn-primary btn-lg back-top" %>
-      <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg" do %>
-      <i class="fa fa-inbox"></i>
-      Message me
-      <% end %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path "dogbanner_sc5jqh"%>');">
+</div>
+
+
+  <div class="card-profile">
+    <div class="banner-content text-center">
+      <div class="card-show-top" style="background-image: url('<%= cl_image_path @dog.photo %>');">
+        <%= link_to dogs_path, class: "btn btn-primary btn-lg back-top" do %>
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        Go back
+        <% end %>
+        <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg back-top-right" do %>
+        <i class="fa fa-inbox"></i>
+        Message me
+        <% end %>
+
+        <h1 class="doggyname"><%= @dog.name %></h1>
+
+
+      </div>
     </div>
   </div>
-</div>
+
+
 
 
 
 <div class="box-dog">
+
   <div class="row">
 
-    <div class="col-xs-12 col-sm-6 about">
-      <h2><i class="fa fa-info-circle" aria-hidden="true"></i><%= "A little bit about #{@dog.name}!" %></h2>
-      <p><%= @dog.description %></p>
-      <h2><i class="fa fa-paw" aria-hidden="true"></i><%= "I am a #{@dog.breed}" %></h2>
-      <h2><i class="fa fa-envira" aria-hidden="true"></i>I am a <%= @dog.size %> dog</h2>
-      <% if @dog.size == "small" %>
-      <%= cl_image_tag "smalldog_wjdiol", class: "dogsize" %>
-      <% elsif @dog.size == "medium" %>
 
-      <%= cl_image_tag "mediumdog_xtfaxd", class: "dogsize" %>
+      <div class="col-xs-12 col-sm-6 about">
+        <h2><i class="fa fa-info-circle" aria-hidden="true"></i><%= "A little bit about #{@dog.name}!" %></h2>
+        <p><%= @dog.description %></p>
 
-      <% elsif @dog.size == "large" %>
-      <%= cl_image_tag "bigdog_hcfoox", class: "dogsize" %>
+        <h2><i class="fa fa-paw" aria-hidden="true"></i><%= "I am a #{@dog.breed}" %></h2>
 
-      <% end %>
-      <h2><i class="fa fa-cutlery" aria-hidden="true"></i>My favorite snack is <%= @dog.favorite_snack %></h2>
+        <h2><i class="fa fa-envira" aria-hidden="true"></i>I am a <%= @dog.size %> dog</h2>
+        <% if @dog.size == "small" %>
+        <%= cl_image_tag "smalldog_wjdiol", class: "dogsize" %>
+        <% elsif @dog.size == "medium" %>
 
-      <h2><i class="fa fa-futbol-o" aria-hidden="true"></i>I love to play with my <%= @dog.favorite_toy %></h2>
+        <%= cl_image_tag "mediumdog_xtfaxd", class: "dogsize" %>
 
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <h2><i class="fa fa-map-marker" aria-hidden="true"></i>Where can you find me?</h2>
+        <% elsif @dog.size == "large" %>
+        <%= cl_image_tag "bigdog_hcfoox", class: "dogsize" %>
 
-      <p><%= @dog.location %></p>
-      <div class="map-show">
+        <% end %>
+        <h2><i class="fa fa-cutlery" aria-hidden="true"></i>My favorite snack is <%= @dog.favorite_snack %></h2>
+
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h2><i class="fa fa-map-marker" aria-hidden="true"></i>Where can you find me?</h2>
+
+        <p><%= @dog.location %></p>
+        <div class="map-show">
         <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @dog.latitude %>,<%= @dog.longitude %>&zoom=16&size=600x300&maptype=roadmap
         &markers=color:green%7Clabel:S%7C<%= @dog.latitude %>,<%= @dog.longitude %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="This is a map">
-      </div>
+
+        <h2><i class="fa fa-futbol-o" aria-hidden="true"></i>I love to play with <%= @dog.favorite_toy %></h2>
+
+        </div>
+        </div>
 
 
 
 
-    </div>
+
 
   </div>
 </div>
