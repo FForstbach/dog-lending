@@ -13,7 +13,6 @@
 
 
 
-
  p {
   font-size: 1.0vmax;
   // display: inline;
@@ -55,7 +54,7 @@
 .ais-refinement-list--label {
   color: black;
   font-family: "PT Sans", "Helvetica", "sans-serif";
-  font-size: 17px;
+  font-size: 15px;
 
 }
 
@@ -71,7 +70,10 @@ body {
   padding-top: 70px;
 }
 
-
+.facets-affix.affix {
+  position: fixed;
+  top: 70px;
+}
 
 
 .ais-infinite-hits--showmore {

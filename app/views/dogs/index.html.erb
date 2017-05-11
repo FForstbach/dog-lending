@@ -12,8 +12,10 @@
 <div class="container-index">
   <div class="row">
     <div class="col-xs-12 col-sm-2" id="facets">
-      <div id="breed"></div>
-      <div id="size"></div>
+      <div class="facets-affix">
+        <div id="breed"></div>
+        <div id="size"></div>
+      </div>
     </div>
 
     <div class="col-xs-12 col-sm-10" id="hits">
@@ -54,7 +56,19 @@
 <% content_for(:after_js) do %>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() {
+  $(document).ready(function()
+  {
+
+    var widthFacets = $('.facets-affix').outerWidth(true);
+    $('.facets-affix').css("width", widthFacets);
+    $('.facets-affix').affix({
+      offset: {
+        top: 300,
+        bottom: function () {
+          return (this.bottom = $('.footer-bottom').outerHeight(true))
+        }
+      }
+    })
 
     var hitTemplate=' <div class="col-xs-12 col-md-6 col-lg-4"><a href="{{{url}}}"><div class="dog-options"><div class="card"><div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(\'{{{photo}}}\');">'+
     '<div class="name"><h2>{{{_highlightResult.name.value}}}</h2></div>'+
@@ -94,7 +108,7 @@
       instantsearch.widgets.refinementList({
         container: '#breed',
         attributeName: 'breed',
-        limit: 10,
+        limit: 7,
         templates: {
           header: 'Breed'
         },
@@ -107,6 +121,7 @@
       );
     search.addWidget(
       instantsearch.widgets.refinementList({
+        sortBy: ['name:desc'],
         container: '#size',
         attributeName: 'size',
         templates: {
