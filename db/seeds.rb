@@ -62,9 +62,6 @@ end
 
 puts "\nAssigning a dog to Robin"
 
-u = User.find_by(email: "robin.kamp@pixeed.com")
-u.dogs.destroy_all
-
 d = Dog.find_by(name: "Teddy")
 d.user = User.find_by(email: "robin.kamp@pixeed.com")
 d.save!
