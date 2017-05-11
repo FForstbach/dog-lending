@@ -63,10 +63,15 @@ dogs.each_with_index do |dog, index|
   print "."
 end
 
-puts "\nAssigning a dog to Robin"
+puts "\nAssigning Teddy to Robin"
 
 d = Dog.find_by(name: "Teddy")
 d.user = User.find_by(email: "robin.kamp@pixeed.com")
 d.save!
 
+puts "\nAssigning Gina to Daniel"
+
+d = Dog.find_by(name: "Gina")
+d.user = User.find_by(email: "danielhuertascompany@gmail.com")
+d.save!
 
