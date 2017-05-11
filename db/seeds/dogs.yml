@@ -106,6 +106,12 @@
   breed: Boxer
   photo: "Bella.jpeg"
 
+- name: Gina
+  size: small
+  description: Happy spanish Mamacita
+  breed: Foxterrier
+  photo: "gina.jpg"
+
 # these two dogs did not successfully get a photo in the seed
 
 # - name: Zillow
