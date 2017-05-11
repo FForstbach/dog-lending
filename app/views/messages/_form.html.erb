@@ -1,5 +1,5 @@
 <%= simple_form_for([ @request, Message.new ], remote: true, url: request_messages_path(@request, format: :js))  do |form| %>
-  <%= form.input :content, as: :string, placeholder: "Press enter to send message" %>
+  <%= form.input :content, as: :string, placeholder: "Enter to send message" %>
   <% hidden_field_tag "user_id", current_user.id %>
   <% hidden_field_tag "request_id", @request.id %>
   <%= form.button :submit, class: "btn btn-primary" %>

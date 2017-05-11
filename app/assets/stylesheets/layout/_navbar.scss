@@ -135,3 +135,33 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+
+
+
+.owner {
+  text-decoration: none;
+
+  color: #1A2930;
+  font-size: 14px;
+
+  // font-size: 14px;
+  // color: white;
+  // background-color: rgba(150, 185, 118, 1);
+  // border-radius: 18px;
+  // padding: 8px;
+  // left: 26%;
+  // text-shadow: 1px 1px 1px #000;
+  // top: 50px;
+  // box-shadow: 1px 1px 1px #000;
+
+  .fa {
+    font-size: 14px;
+    color: #1A2930;
+    margin-right: 5px;
+  }
+}
+
+.owner:hover {
+  color: #96B976;
+}

@@ -33,7 +33,7 @@ a:hover, a:focus {
   left: 1%;
   margin-top: 14%;
   margin-bottom: 2%;
-  vertical-align: middle;
+  vertical-align: left;
   padding-left: 30px;
   padding-right: 30px;
   .fa {
@@ -54,31 +54,11 @@ a:hover, a:focus {
 
 }
 
-.owner {
-  position: relative;
-  font-size: 2vw;
-  color: white;
-  background-color: rgba(150, 185, 118, 1);
-  border-radius: 18px;
-  padding: 16px;
-  left: 26%;
-  text-shadow: 1px 1px 1px #000;
-  top: 50px;
-  box-shadow: 1px 1px 1px #000;
 
-  .fa {
-    font-size: 2vw;
-    color: #1A2930;
-    margin-right: 5px;
-  }
-}
-
-.owner:hover {
-  background-color: #739356;
-}
 
 .borrower {
-  position: relative;
+  text-align: center;
+
   font-size: 2vw;
   color: white;
   background-color: rgba(150, 185, 118, 1);
@@ -89,6 +69,11 @@ a:hover, a:focus {
   top: 50px;
   box-shadow: 1px 1px 1px #000;
 
+  img {
+    width: 15px;
+
+
+  }
 
   .fa {
     font-size: 2vw;
@@ -101,7 +86,11 @@ a:hover, a:focus {
   background-color: #739356;
 }
 
+.center {
+  margin-top: 50px;
 
+
+}
 
 
 @media only screen and (max-width: 375px) {

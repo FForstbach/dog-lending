@@ -7,20 +7,23 @@
       <source src="<%=cl_video_path "Emma_a5kavt"%>">
     </video>
         <div class="videobanner text-center">
-          <h1>Connecting dog lovers and dog owners</h1>
-          <p class="text-center">to share the <i class="fa fa-heart" aria-hidden="true">
-          </i> for dogs with locals</p>
-        </div>
+          <h1>Meet your new four-legged friend</h1>
+          <p class="text-center">borrow a dog <i class="fa fa-heart" aria-hidden="true">
+          </i> from your neighbor</p>
+
         <% if user_signed_in? %>
-          <a href="<%= dashboard_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
-          <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
+
+          <div class="center">
+
+          <a href="<%= dogs_path %>" class="borrower"><%= image_tag "borrower-button-3.png" %>Connect with a canine!</a>
         <% else %>
-          <a href="<%= new_user_registration_path(:type => 'owner') %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
-          <a href="<%= dogs_path %>" class="borrower"><i class="fa fa-blind" aria-hidden="true"></i>I want to borrow a dog</a>
+
+          <a href="<%= dogs_path %>" class="borrower"><%= image_tag "borrower-button-3.png" %>Connect with a canine!</a>
         <% end %>
+        </div>
 
 
-
+        </div>
 
       </div>
     </div>
@@ -29,13 +32,13 @@
 
 
     <div class="container text-center">
-      <h2 class="text-center">How it works</h2>
+      <h2 class="text-center">How we work</h2>
       <hr>
 
       <div class="row-icons">
         <div class="col-xs-12 col-sm-4">
           <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
-          <p>Create a profile</p>
+          <p></p>
         </div>
         <div class="col-xs-12 col-sm-4">
           <%= cl_image_tag "Abonement_wau_unishm", class: "venues" %>
@@ -52,12 +55,46 @@
       <div class="row">
         <div class="col-xs-12">
         <hr>
-          <h2>Plenty of dogs are waiting for you</h2>
+          <h2>Plenty of pups are waiting for you</h2>
         </div>
       </div>
-       <div class="map home">
-            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= @dog_locations %>&zoom=11&size=640x400&&scale=2&maptype=roadmap
-          &markers=size:mid%7Ccolor:red%7C<%= @dog_locations %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="This is a map">
+       <div class="map home", id="map">
+
       </div>
     </div>
+
+    <% content_for(:after_js) do %>
+     <script>
+       $(document).ready(function() {
+         var handler = Gmaps.build('Google');
+         handler.buildMap({
+          internal: { id: 'map' },
+          provider: {
+            scrollwheel: false
+          }
+          },
+          function() {
+           markers = handler.addMarkers(<%= raw @markers.to_json %>);
+           handler.bounds.extendWith(markers);
+           handler.fitMapToBounds();
+           if (markers.length == 0) {
+             handler.getMap().setZoom(2);
+           } else if (markers.length == 1) {
+             handler.getMap().setZoom(14);
+           }
+         });
+       });
+     </script>
+    <% end %>
+
+
+
+
+
+
+
+
+
+
+
 

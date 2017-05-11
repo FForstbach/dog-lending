@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12"></div>
-    <h1>Add your dog</h1>
+    <h1>Add Doggo</h1>
     <% if current_user.dogs.first.nil? %>
-      <%= link_to "Skip now and add my dog later", dashboard_path %>
+      <%= link_to "Complete Pup Profile later", dashboard_path %>
     <% end %>
     <hr>
       <%= simple_form_for(@dog) do |f| %>
