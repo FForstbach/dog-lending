@@ -4,7 +4,7 @@
     <% if params[:type] %>
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <h2 class="text-center"><%= t(".sign_up") %></h2>
-        <p class="text-center"><%= link_to "Already have an account? Sign in >", new_user_session_path %></p>
+        <p class="text-center"><%= link_to "Been here before? Sign in >", new_user_session_path %></p>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
@@ -27,8 +27,8 @@
       </div>
     <% else %>
       <p>This is where the user chooses which type of registration he will see</p>
-      <%= link_to "I own a dog", new_user_registration_path(:type => 'owner'), class: "btn btn-primary" %>
-      <%= link_to "I am interested borrowing a dog", new_user_registration_path(:type => 'borrower'), class: "btn btn-primary" %>
+      <%= link_to "Meet my pup!", new_user_registration_path(:type => 'owner'), class: "btn btn-primary" %>
+      <%= link_to "Can I hang with your doggo?", new_user_registration_path(:type => 'borrower'), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

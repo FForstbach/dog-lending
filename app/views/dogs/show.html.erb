@@ -8,7 +8,7 @@
     <h1>Woof! My name is <%= @dog.name %></h1>
     <p>Do you want to play? Click the button below to ask my owner!</p>
     <div class="buttons-top">
-      <%= link_to "Go back to overview", dogs_path, class: "btn btn-primary btn-lg back-top" %>
+      <%= link_to "Go back", dogs_path, class: "btn btn-primary btn-lg back-top" %>
       <%= link_to new_request_path(:dog_id => @dog.id), class: "btn btn-primary btn-lg" do %>
       <i class="fa fa-inbox"></i>
       Message me
@@ -43,7 +43,7 @@
 
     </div>
     <div class="col-xs-12 col-sm-6">
-      <h2><i class="fa fa-map-marker" aria-hidden="true"></i>Where can you find me?</h2>
+      <h2><i class="fa fa-map-marker" aria-hidden="true"></i>You can find me here!</h2>
 
       <p><%= @dog.location %></p>
       <div class="map-show">
