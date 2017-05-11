@@ -10,12 +10,16 @@
 
 
     <!-- Search form -->
-
-
     <% if user_signed_in? %>
-      <a href="<%= dashboard_path %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
+      <%= link_to dashboard_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <i class="fa fa-paw" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
+        I own a dog
+      <% end %>
     <% else %>
-      <a href="<%= new_user_registration_path(:type => 'owner') %>" class="owner"><i class="fa fa-paw" aria-hidden="true"></i> I am a dog owner</a>
+      <%= link_to new_user_registration_path(:type => 'owner'), class: "navbar-wagon-item navbar-wagon-link" do %>
+          <i class="fa fa-paw" id="navbar-wagon-item navbar-wagon-link" aria-hidden="true"></i>
+          I own a dog
+        <% end %>
     <% end %>
 
     <!-- Text link -->
