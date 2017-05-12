@@ -5,91 +5,98 @@
 
     <video autoplay muted loop class="embed-responsive-item video-banner" id="autovid" width="100%" >
       <source src="<%=cl_video_path "Emma_a5kavt"%>">
-    </video>
-        <div class="videobanner text-center">
-          <h1>Meet your new four-legged friend</h1>
-          <p class="text-center">borrow a dog <i class="fa fa-heart" aria-hidden="true">
-          </i> near you</p>
+      </video>
+      <div class="videobanner text-center">
+        <h1>Meet your new four-legged friend</h1>
+        <p class="text-center">borrow a dog <i class="fa fa-heart" aria-hidden="true">
+        </i> near you</p>
 
 
-          <div class="center">
+        <div class="center">
 
           <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>Find a dog</a>
 
         </div>
 
 
-        </div>
-
       </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container text-center">
+  <h2 class="text-center">How we work</h2>
+  <hr>
+
+  <div class="row-icons">
+    <div class="col-xs-12 col-sm-4">
+      <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
+      <p>Find a dog</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= cl_image_tag "Abonement_wau_unishm", class: "venues" %>
+      <p>Connect with the owner</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= cl_image_tag "shareyourlove_pa4bhb", class: "venues" %>
+      <p>Share your love</p>
+
     </div>
   </div>
 
 
-
-    <div class="container text-center">
-      <h2 class="text-center">How we work</h2>
+  <div class="row">
+    <div class="col-xs-12">
       <hr>
+      <h2>Plenty of dogs are waiting for you</h2>
+    </div>
+  </div>
+  <div class="map home", id="map">
 
-      <div class="row-icons">
-        <div class="col-xs-12 col-sm-4">
-          <%= cl_image_tag "create_account_qsd7nf", class: "venues" %>
-          <p>Find a dog</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <%= cl_image_tag "Abonement_wau_unishm", class: "venues" %>
-          <p>Connect with the owner</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <%= cl_image_tag "shareyourlove_pa4bhb", class: "venues" %>
-          <p>Share your love</p>
+  </div>
+  <hr>
+  <div class="card-home">
+    <h2 class="text-center">Our newest dogs</h2>
+    <%  @dogs_last.each do |dog| %>
+    <div class="col-xs-12 col-md-6 col-lg-4">
+      <%= link_to dog_path(dog) do %>
+      <div class="dog-options">
+        <div class="card">
+          <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( '<%= cl_image_path dog.photo_url %>' );">
 
-        </div>
-      </div>
+            <div class="name">
+              <h2><%= dog.name %></h2>
 
+            </div>
 
-      <div class="row">
-        <div class="col-xs-12">
-        <hr>
-          <h2>Plenty of dogs are waiting for you</h2>
-        </div>
-      </div>
-       <div class="map home", id="map">
-
-      </div>
-      <hr>
-      <div class="card-home">
-      <h2 class="text-center">Our newest dogs</h2>
-      <%  @dogs_last.each do |dog| %>
-        <div class="col-xs-12 col-md-6 col-lg-4">
-        <%= link_to dog_path(dog) do %>
-        <div class="dog-options">
-          <div class="card">
-            <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( '<%= cl_image_path dog.photo_url %>' );">
-
-              <div class="name">
-                <h2><%= dog.name %></h2>
-
+            <div class="location-wrap">
+              <p><img class="avatar" id="card-user" src="<%= cl_image_path dog.user.photo_url || "http://www.fillmurray.com/g/60/60" %>"></p>
+              <div class="card-category">
+                <p><h4><%= dog.breed %></h4></p>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= dog.location %></p>
               </div>
 
-              <div class="location-wrap">
-                <p><img class="avatar" id="card-user" src="<%= cl_image_path dog.user.photo_url || "http://www.fillmurray.com/g/60/60" %>"></p>
-                <div class="card-category">
-                  <p><h4><%= dog.breed %></h4></p>
-                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= dog.location %></p>
-                </div>
-
-              </div>
             </div>
           </div>
         </div>
-        <% end %>
       </div>
       <% end %>
-
-      </div>
     </div>
 
+    <% end %>
+
+
+
+  </div>
+
+</div>
+
+<div class="see-more text-center">
+  <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>See more</a>
+</div>
 
 
     <% content_for(:after_js) do %>
