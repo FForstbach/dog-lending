@@ -14,7 +14,7 @@
 
           <div class="center">
 
-          <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>Find a dog!</a>
+          <a href="<%= dogs_path %>" class="borrower"><%= image_tag "button_home_4.png" %>Find a dog</a>
 
         </div>
 
@@ -57,7 +57,40 @@
        <div class="map home", id="map">
 
       </div>
+      <hr>
+      <div class="card-home">
+      <h2 class="text-center">Our newest dogs</h2>
+      <%  @dogs_last.each do |dog| %>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+        <%= link_to dog_path(dog) do %>
+        <div class="dog-options">
+          <div class="card">
+            <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( '<%= cl_image_path dog.photo_url %>' );">
+
+              <div class="name">
+                <h2><%= dog.name %></h2>
+
+              </div>
+
+              <div class="location-wrap">
+                <p><img class="avatar" id="card-user" src="<%= cl_image_path dog.user.photo_url || "http://www.fillmurray.com/g/60/60" %>"></p>
+                <div class="card-category">
+                  <p><h4><%= dog.breed %></h4></p>
+                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= dog.location %></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+
+      </div>
     </div>
+
+
 
     <% content_for(:after_js) do %>
      <script>
