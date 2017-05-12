@@ -8,6 +8,8 @@ class PagesController < ApplicationController
       @dog_locations += dog.latitude.to_s + "," + dog.longitude.to_s + "%7C"
     end
 
+    @dogs_last = Dog.last(3)
+
     @markers = Gmaps4rails.build_markers(@dogs) do |dog, marker|
       marker.lat dog.latitude
       marker.lng dog.longitude
