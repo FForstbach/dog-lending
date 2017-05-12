@@ -1,48 +1,49 @@
 <div class="container">
   <div class="signup">
-  <div class="row form">
-  <%= session[:type] %>
-    <% if params[:type] %>
+    <div class="row form">
+      <%= session[:type] %>
+      <% if params[:type] %>
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <h2 class="text-center"><%= t(".sign_up") %></h2>
         <p class="text-center"><%= link_to "Been here before? Sign in >", new_user_session_path %></p>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
+        <%= f.error_notification %>
 
-          <div class="form-inputs">
-            <%= f.input :email, required: true, autofocus: true %>
-            <%= f.input :password, required: true %>
-            <%= f.input :password_confirmation, required: true %>
-            <%= f.input :first_name, required: true %>
-            <%= f.input :last_name, required: true %>
-            <%= f.input :location, required: true %>
-          </div>
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true %>
+          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :first_name, required: true %>
+          <%= f.input :last_name, required: true %>
+          <%= f.input :location, required: true %>
+        </div>
 
-          <div class="form-actions">
-            <%= f.button :submit, t(".sign_up"), html: { class: "btn btn-primary"} %>
-          </div>
+        <div class="form-actions">
+          <%= f.button :submit, t(".sign_up"), html: { class: "btn btn-primary"} %>
+        </div>
         <% end %>
         <hr>
         <%= render "devise/shared/links" %>
       </div>
-    <% else %>
-    <h3>We can't wait to welcome you</h3>
-    <hr>
+      <% else %>
+      <h3>We can't wait to welcome you</h3>
+      <hr>
 
-    <p>please chose below<i class="fa fa-level-down" aria-hidden="true"></i></p>
+      <p>please chose below<i class="fa fa-level-down" aria-hidden="true"></i></p>
       <a href="<%= new_user_registration_path(:type => 'owner') %>" class="sign-up-borrower"><%= image_tag "button_home_4.png"%>I own a dog</a>
       <a href="<%= new_user_registration_path(:type => 'borrower') %>" class="sign-up-borrower"><%= image_tag "button_home_4.png" %>I want to borrow a dog</a>
 
 
       <%= cl_image_tag "sign_d7egcz", class: "venues" %>
 
-    <% end %>
+      <% end %>
 
+    </div>
   </div>
-</div>
+  </div>
 
-<% content_for(:after_js) do %>
+  <% content_for(:after_js) do %>
   <script type="text/javascript">
     $(document).ready(function() {
       var flat_address = $('#user_location').get(0);
@@ -106,5 +107,5 @@
       };
     }
   </script>
-  </div>
-<% end %>
+
+  <% end %>
