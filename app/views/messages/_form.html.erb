@@ -1,4 +1,4 @@
-<%= simple_form_for([ @request, Message.new ], remote: true, url: request_messages_path(@request, format: :js))  do |form| %>
+<%= simple_form_for([ @request, Message.new ], remote: true, url: request_messages_path(@request, format: :js), html: { autocomplete: 'off' })  do |form| %>
   <%= form.input :content, as: :string, placeholder: "Enter to send message" %>
   <% hidden_field_tag "user_id", current_user.id %>
   <% hidden_field_tag "request_id", @request.id %>

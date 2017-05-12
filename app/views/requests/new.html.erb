@@ -12,6 +12,7 @@
       <div class="col-xs-12 col-md-8">
         <div class="request-form text-center">
         <h3><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %>Your are talking to <%= @dog.user.first_name %></h3>
+        <img class="avatar" id="card-user" src="<%= cl_image_path @dog.user.photo_url || "http://www.fillmurray.com/g/60/60" %>">
         <hr>
           <div class="message-info">
 
@@ -37,7 +38,7 @@
 
 
 
-          <%= simple_form_for @request, method: "post" do |f| %>
+          <%= simple_form_for @request, method: "post", html: { autocomplete: 'off' } do |f| %>
             <%= text_field_tag :'request[messages_attributes][][content]', "", class: 'form-control textfield-big', placeholder: "Enter your text here" %>
             <%= f.input :dog_id, :as => :hidden %>
             <%= f.submit "Submit your request", class: "btn btn-primary" %>
