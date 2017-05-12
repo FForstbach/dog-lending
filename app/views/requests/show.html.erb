@@ -17,10 +17,12 @@
     <div class="col-xs-12 col-md-8">
       <div class="request-form text-center">
       <% if current_user == @request.user %>
-        <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %> You are speaking to <%= @dog.user.first_name %> <%= @dog.user.last_name %>
+        <h3><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %> You are speaking to <%= @dog.user.first_name %> <%= @dog.user.last_name %></h3>
+
       <% else %>
-        <p><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %> You are speaking to <%= @request.user.first_name %> <%= @request.user.last_name %>
+        <h3><%= cl_image_tag "waumessenger_fav_i5qjox", class: "waumessage_img" %> You are speaking to <%= @request.user.first_name %> <%= @request.user.last_name %></h3>
       <% end %>
+
         <div class="message-info">
           <div class="col-xs-12-show">
             <div id="all-messages">

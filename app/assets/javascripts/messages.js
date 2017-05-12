@@ -8,7 +8,7 @@ if ($messages.length == 0)
 window.refreshCall = function() {
 
   $.get( window.location.href, function( data ) {
-    data = $(data).find('#all-messages');
+    data = $(data).find('#all-messages').html();
 
     $messages.html( data );
   });
