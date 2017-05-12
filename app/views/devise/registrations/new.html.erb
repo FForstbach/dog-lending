@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="signup">
   <div class="row form">
   <%= session[:type] %>
     <% if params[:type] %>
@@ -26,10 +27,18 @@
         <%= render "devise/shared/links" %>
       </div>
     <% else %>
-      <p>This is where the user chooses which type of registration he will see</p>
-      <%= link_to "Meet my pup!", new_user_registration_path(:type => 'owner'), class: "btn btn-primary" %>
-      <%= link_to "Can I hang with your doggo?", new_user_registration_path(:type => 'borrower'), class: "btn btn-primary" %>
+    <h3>We can't wait to welcome you</h3>
+    <hr>
+
+    <p>please chose below<i class="fa fa-level-down" aria-hidden="true"></i></p>
+      <a href="<%= new_user_registration_path(:type => 'owner') %>" class="sign-up-borrower"><%= image_tag "button_home_4.png"%>I own a dog</a>
+      <a href="<%= new_user_registration_path(:type => 'borrower') %>" class="sign-up-borrower"><%= image_tag "button_home_4.png" %>I want to borrow a dog</a>
+
+
+      <%= cl_image_tag "sign_d7egcz", class: "venues" %>
+
     <% end %>
+
   </div>
 </div>
 
@@ -97,4 +106,5 @@
       };
     }
   </script>
+  </div>
 <% end %>
