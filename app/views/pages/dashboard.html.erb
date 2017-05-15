@@ -4,8 +4,7 @@
   </div>
   <br>
   <div>
-    <%= image_tag @user.photo, class: "avatar-bordered dashboard-banner" %>
-    <%= link_to "Edit Profile", root_path %>
+    <%= link_to "Edit Profile", edit_user_registration_path(@user) %>
   </div>
 </div>
 
@@ -15,14 +14,15 @@
       <h1 class="text-center">My Requests</h1>
       <div>
         <% @requests.each do |request| %>
-          <div class="request">
-            <img src="<%= request.dog.photo %>" alt="user" class="avatar-bordered">
-            <h3><%= request.dog.name %></h3>
-            <h4><%= request.messages.last.content %></h4>
-            <p><%= request.messages.last.created_at %></p>
-            <hr>
+          <%= link_to request_path(request) do %>
+            <div class="request">
+              <img src="<%= request.dog.photo %>" alt="user" class="avatar-bordered">
+              <h3><%= request.dog.name %></h3>
+              <h4><%= request.messages.last.content %></h4>
+              <p><%= request.messages.last.created_at %></p>
+            </div>
+          <% end %>
         <% end %>
-          </div>
       </div>
     </div>
   </div>
