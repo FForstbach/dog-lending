@@ -1,74 +1,13 @@
-<div class="container-fluid">
+<div class="banner dashboard" style="background-image: url('<%= cl_image_path "teddyball_qsbmko"%>');">
+</div>
+
+<div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-6">
+      <h1>My Messages</h1>
     </div>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row-dashboard">
-    <div class="banner dashboard" style="background-image: url('<%= cl_image_path "teddyball_qsbmko"%>');">
-      <div class="banner-content text-center">
-      </div>
-</div>
-
-<div class="dashboard">
-
-<h2 style="font-size: 50px;"><i class="fa fa-tachometer" aria-hidden="true"></i><%= @user.first_name %>`s Dashboard</h2>
-
-
-      <div class="row">
-
-        <div class="col-xs-6 <%= @dogs.count == 0 ? 'col-xs-offset-3' : nil %>">
-          <div class="profile text-center panel">
-            <h2><%= t('.messages_title') %></h2>
-          </div>
-        </div>
-
-
-        <% if @dogs.count != 0 %>
-        <div class="col-xs-6">
-          <div class="profile-dogs text-center panel">
-            <h2><%= t('.dogs_title') %></h2>
-          </div>
-
-          <div class="col-xs-12">
-            <% @dogs.each do |dog| %>
-              <div class="dog-profile">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6">
-                    <%= image_tag "dogexample.jpg", class: "img-thumbnail" %>
-
-                    <div class="availability-class">
-                      <h5>Select Availability:</h5>
-
-                        <form action="<%= availability_dog_path(id: dog.id) %>">
-                            <div class="checklist" style="display: inline-flex;">
-                            <label><input type="checkbox" value="Weekdays" name="availability"> Weekdays </label>
-                            <label><input type="checkbox" value="Weekends" name="availability"> Weekends </label>
-                            <label><input type="checkbox" value="Vacations" name="availability"> Vacations </label>
-                            </div>
-                        </form>
-                    </div>
-
-                  </div>
-                  <div class="col-xs-6 col-sm-6">
-                    <h2><%= dog.name %></h2>
-                    <h4><i><%= dog.breed %></i></h4>
-                      <%= link_to "Manage Pup", edit_dog_path(id: dog.id), {class: "btn btn-primary btn-sm", id: "pup"} %>
-
-                  </div>
-                </div>
-              </div>
-            <% end %>
-            <hr>
-              <div class="more-stuff">
-                <%= link_to "Add a Doggo", new_dog_path, {class: "btn btn-primary"} %>
-              </div>
-
-
-          </div>
-        </div>
-      <% end %>
+    <div class="col-xs-6">
+      <h1>My dogs</h1>
     </div>
   </div>
 </div>
