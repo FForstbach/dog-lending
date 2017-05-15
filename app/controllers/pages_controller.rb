@@ -26,6 +26,6 @@ class PagesController < ApplicationController
     @user = current_user
     user_id = current_user.id
     @dogs = Dog.where(user_id: user_id)
-    # @messages = @user.messages
+    @requests = current_user.requests
   end
 end

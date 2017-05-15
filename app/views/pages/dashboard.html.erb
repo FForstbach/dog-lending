@@ -1,13 +1,29 @@
-<div class="banner dashboard" style="background-image: url('<%= cl_image_path "teddyball_qsbmko"%>');">
+<div class="banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path "dogbanner_sc5jqh"%>');">
+  <div>
+    <h1><%= current_user.first_name %>`s Dashboard</h1>
+  </div>
+  <br>
+  <div>
+    <%= image_tag @user.photo, class: "avatar-bordered dashboard-banner" %>
+    <%= link_to "Edit Profile", root_path %>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
-      <h1>My Messages</h1>
-    </div>
-    <div class="col-xs-6">
-      <h1>My dogs</h1>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <h1 class="text-center">My Requests</h1>
+      <div>
+        <% @requests.each do |request| %>
+          <div class="request">
+            <img src="<%= request.dog.photo %>" alt="user" class="avatar-bordered">
+            <h3><%= request.dog.name %></h3>
+            <h4><%= request.messages.last.content %></h4>
+            <p><%= request.messages.last.created_at %></p>
+            <hr>
+        <% end %>
+          </div>
+      </div>
     </div>
   </div>
 </div>
