@@ -7,6 +7,30 @@ h2, h3, h4, h5 {
   text-align: center;
 }
 
+.user-requests {
+  background-color: white;
+  padding: 1em;
+}
+
+.user-profile  .username {
+  text-align: left;
+}
+
+.user-profile .avatar-profile {
+  float: left;
+  border-radius: 50%;
+  padding: .5em;
+  width: 45%;
+}
+
+p .user-profile  .email {
+  font-size: 0.8em;
+}
+
+.user-profile .aboutme {
+  clear: left;
+}
+
 .request {
   margin-bottom: 10px;
   padding: 10px;

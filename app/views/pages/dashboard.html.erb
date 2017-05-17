@@ -11,8 +11,8 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8">
-      <h1 class="text-center">My Requests</h1>
-      <div>
+      <div class="user-requests">
+        <h1 class="text-center">My Requests</h1>
         <% @requests.each do |request| %>
           <%= link_to request_path(request) do %>
             <div class="request">
@@ -25,18 +25,26 @@
         <% end %>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4">
-      <h3 class="text-center">My Profile</h3>
-      <div>
-        <%= image_tag @user.photo_url, class: "avatar-large" %>
-        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
-        <p><%= @user.email %></p>
-        <% if @user.aboutme %>
-          <p>@user.aboutme</p>
-        <% else %>
-        <%= link_to "Add About You", edit_user_registration_path(@user) %></p>
-        <% end %>
-        <%= button_to "Edit Profile", edit_user_registration_path(@user), class: "btn btn-primary" %>
+    <div class="user-profile">
+      <div class="col-xs-12 col-md-4">
+        <h3 class="text-center">My Profile</h3>
+        <div>
+          <%= image_tag @user.photo_url, class: "avatar-profile" %>
+          <div class="username">
+            <h4><%= @user.first_name %> <%= @user.last_name %></h4>
+          </div>
+          <div class="email">
+            <p><%= @user.email %></p>
+          </div>
+          <% if @user.aboutme %>
+          <div class="aboutme">
+            <p>@user.aboutme</p>
+          </div>
+          <% else %>
+            <%= link_to "Add About You", edit_user_registration_path(@user) %></p>
+          <% end %>
+          <%= button_to "Edit Profile", edit_user_registration_path(@user), class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
 
